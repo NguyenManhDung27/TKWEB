@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/kkk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTNET</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
+</head>
+<body>
+  <div class ="wrapper">
+    <header>
+        <div class="header-container">
+        <img src = "assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+          <div class="account-cart">
+            <div class="account">
+              <i class="fa-regular fa-user"></i>
+              <div>
+                <span>Đăng nhập / Đăng ký</span><br>
+              </div>
+            </div>
+          </div>
+            <div class="cart">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <button>
+              <span class="badge"></span>
+              <strong> Giỏ hàng</strong>
+            </button>
+            </div>
+            <div id="lienhe">
+              <i class="fa-solid fa-phone-volume"> + 0243569884</i>
+            </div>
+          </div>
+        </div>
+      </header>
+  <div class ="wrapper-1">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/banner333.png" class="d-block w-100 object-fit-cover" alt="Banner 1">
+        
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/banner4.png" class="d-block w-100 object-fit-cover" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/banner2.png" class="d-block w-100 object-fit-cover" alt="Banner 3">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/banner1.png" class="d-block w-100 object-fit-cover" alt="Banner 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+      </div>
+    </div>
+    <section class="menu">
+      <div class="container">
+          <button id="toggle">☰</button>
+          <div id="menu">
+              <button class="btn active" data-cat="all">Trang Chủ</button>
+              <div class="drop-wrap">
+                  <button class="btn" data-cat="trang-guong">Tranh Tráng Gương ▾ </button>
+                  <div class="drop">
+                      <a href="#">Tranh Bộ Ba</a>
+                      <a href="#">Tranh Tứ Quý</a>
+                      <a href="#">Tranh Bộ Năm</a>
+                      <a href="#">Tranh Tròn</a>
+                  </div>
+              </div>
+              <button class="btn" data-cat="lua">Tranh Lụa</button>
+              <button class="btn" data-cat="canvas">Tranh Canvas</button>
+              <button class="btn" data-cat="den-led">Tranh Đèn LED</button>
+              <div class="drop-wrap">
+                  <button class="btn" data-cat="chu-de">Tranh Theo Chủ Đề ▾ </button>
+                  <div class="drop">
+                      <a href="#">Tranh Phong Cảnh</a>
+                      <a href="#">Tranh Mã Đáo Thành Công</a>
+                      <a href="#">Tranh Thuận Buồm Xuôi Gió</a>
+                      <a href="#">Tranh Sơn Thuỷ Hữu Tình </a>
+                      <a href="#">Sơn Thủy</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- danh mục sản phẩm -->
+  <section class="flash-sale py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold text-brown text-center custom-font">SẢN PHẨM BÁN CHẠY</h2>
+        <div id="countdown" class="text-end text-dark fw-bold"></div>
+      </div>
+      <div id="flashSaleCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-between">
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/gia-tranh-trang-guong-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Tráng Gương Đôi Hươu</h5>
+                  <p class=" fw-bold text-brown custom-font">750.000đ <small class="text-muted text-decoration-line-through">1.150.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem; ">
+                <img src="assets/img/tranhtuquy11.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Tứ Quý Xuân Hạ Thu Đông </h5>
+                  <p class="fw-bold text-brown custom-font">700.000đ <small class="text-muted text-decoration-line-through">1.200.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/tranhbophongcanh.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Bộ 3 Phong Cảnh </h5>
+                  <p class="fw-bold text-brown custom-font">980.000đ <small class="text-muted text-decoration-line-through">1.430.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/tranh-ban-nguyet-23470115.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Bán Nguyệt Hoa Sen</h5>
+                  <p class="fw-bold text-brown custom-font">650.000đ <small class="text-muted text-decoration-line-through">900.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/O1CN01YhP0Jt1NLJr1vo4ca_2207958381553-min.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Tráng Gương Phong Cảnh </h5>
+                  <p class="fw-bold text-brown custom-font">1.200.000đ <small class="text-muted text-decoration-line-through">1.340.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-between">
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/4945b1e6926c3a32637d.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Mã Đáo Thành Công</h5>
+                  <p class="fw-bold text-brown custom-font">999.000đ <small class="text-muted text-decoration-line-through">1.400.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/Tranh-Hinh-Tron-Trang-Guong-3D-La-Bach-Qua-Va-2-Chu-Huou-TTG076.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Tráng Gương Lá Bạch Quả</h5>
+                  <p class="fw-bold text-brown custom-font">890.000đ <small class="text-muted text-decoration-line-through">1.120.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/tranh-den-led-phong-khach-ca-va-sen.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Đèn Led Cá Và Sen</h5>
+                  <p class="fw-bold text-brown custom-font">710.000đ <small class="text-muted text-decoration-line-through">900.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/tranh-trang-guong-8.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Tráng Gương Đôi Công</h5>
+                  <p class="fw-bold text-brown custom-font">750.000đ <small class="text-muted text-decoration-line-through">980.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+              <div class="card me-3" style="width: 18rem;">
+                <img src="assets/img/Tranh đồng hô1.webp" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tranh Đồng Hồ Sơn Thuỷ </h5>
+                  <p class="fw-bold text-brown custom-font">500.000đ <small class="text-muted text-decoration-line-through">740.000đ</small></p>
+                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>  
+      <!-- Khám phá các sản phẩm -->
+      <div class="explore-wrapper ">
+        <section class="product-explore "> 
+          <div class="container">
+            <div class="py-4 text-left" > 
+            <h2 class="fw-bold text-dark custom-font"> KHÁM PHÁ SẢN PHẨM</h2>
+          </div>
+            <div id="category-filter" class="btn-group d-flex flex-wrap justify-content-center mb-4"></div>
+            <div id="explore-products" class="row"></div>
+            <nav class="d-flex justify-content-center mt-4">
+              <ul class="pagination" id="pagination"></ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+      </div>
+      <!--footer -->
+      <div class="footer">
+      <footer class=" pt-5 border-top">
+        <div class="container">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+              <img src="assets/img/logo.png" alt="ARTNET Logo" style="height: 60px;" class="me-3" />
+              <div>
+                <h5 class="fw-bold mb-1">ĐĂNG KÝ NHẬN TIN</h5>
+                <small class="text-muted">Nhận thông tin mới nhất từ chúng tôi</small>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex">
+              <input type="email" class="form-control me-2 rounded-pill" placeholder="Nhập email của bạn" />
+              <button class="btn btn-danger rounded-pill px-4">
+                ĐĂNG KÝ →
+              </button>
+            </div>
+          </div>
+          <hr />
+        </div>
+          <div class="row text-start">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">VỀ CHÚNG TÔI</h6>
+              <p class="small mt-2">
+                Artnet là thương hiệu được thành lập vào năm 2022 với tiêu chí đặt chất lượng sản phẩm lên hàng đầu.
+              </p>
+              <div class="d-flex gap-3">
+                <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
+              </div>
+            </div>
+      
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">LIÊN KẾT</h6>
+              <ul class="list-unstyled mt-2">
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#">Điều khoản</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Tin tức</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">SẢN PHẨM</h6>
+              <ul class="list-unstyled mt-2">
+                <li><a href="#">Tranh bộ</a></li>
+                <li><a href="#">Tranh tráng gương</a></li>
+                <li><a href="#">Tranh tròn</a></li>
+                <li><a href="#">Tranh phong cảnh</a></li>
+                <li><a href="#">Tranh đèn led</a></li>
+                <li><a href="#">Tranh đồng hồ</a></li>
+                <li><a href="#">Tranh canvas</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">LIÊN HỆ</h6>
+              <ul class="list-unstyled mt-2">
+                <li><i class="fas fa-map-marker-alt text-danger me-2"></i>12 Chùa Bộc, Đống Đa, Hà Nội</li>
+                <li><i class="fas fa-phone-alt text-danger me-2"></i>0123 456 789</li>
+                <li><i class="fas fa-phone-alt text-danger me-2"></i>0987 654 321</li>
+                <li><i class="fas fa-envelope text-danger me-2"></i>artnetpic@gmail.com</li>
+                <li><i class="fas fa-envelope text-danger me-2"></i>andecor@gmail.com.com</li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="text-center py-3 small text-muted border-top mt-4">
+            Copyright 2022 Artnet. All Rights Reserved.
+          </div>
+        </div>
+        <a href="#" class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-4">
+          <i class="fas fa-arrow-up text-white"></i>
+        </a>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/khamphasp.js"></script>
+      <script src="assets/js/dropdown.js"></script>
+      </body>
+      </html>
