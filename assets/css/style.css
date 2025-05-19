@@ -263,9 +263,6 @@ body {
     background-color: #f7f3eb;
   }
   /* Đảm bảo section có khoảng cách với phần trên */
-.text-brown {
-  color:#8b5e3c !important
-}
 /* Đảm bảo các cột giữ chiều cao đều */
 #product-list .col {
   display: flex;
