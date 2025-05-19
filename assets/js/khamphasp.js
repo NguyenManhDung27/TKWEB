@@ -1,24 +1,33 @@
 
 const products = [
-  { name: "Tranh Tráng Gương Sơn Vân", img: "./assets/img/kpt.tranhtrangguong4.webp", price: "980.000đ", category: "tranh-trang-guong" },
-  { name: "Tranh Đèn Led Hoa", img: "./assets/img/kpt.tranhdenled5.webp", price: "710.000đ", category: "tranh-den-led" },
-  { name: "Tranh Tam Cốc Mùa Lúa", img: "./assets/img/kpt.tranhphongcanhr5.jpeg", price: "700.000đ", category: "tranh-chu-de" },
-  { name: "Tranh Bộ Huyền Dạ", img: "./assets/img/kpt.tranhbo1.jpg", price: "750.000đ", category: "tranh-trang-guong" },
-  { name: "Tranh Đồng Hồ Đôi Hươu Tài Lộc", img: "./assets/img/kpt.tranhdongho4.webp", price: "650.000đ", category: "tranh-dong-ho" },
-  { name: "Tranh Ngư Thuỷ", img: "./assets/img/kpt.tranhbannguyet5.jpeg", price: "600.000đ", category: "tranh-trang-guong" },
-  { name: "Tranh Canvas Hoa", img: "./assets/img/kpt.tranhcanvas4.jpg", price: "600.000đ", category: "tranh-canvas" },
-  { name: "Tranh Bán Nguyệt Hươu Lộc", img: "./assets/img/kpt.tranhbannguyet4.webp", price: "750.000đ", category: "tranh-trang-guong" },
-  { name: "Tranh Đồng Hồ Lộc Nguyệt", img: "./assets/img/kpt.tranhdongho3.webp", price: "620.000đ", category: "tranh-dong-ho" },
-  { name: "Tranh Canvas Thanh Hoa", img: "./assets/img/kpt.tranhcanvas3.jpg", price: "430.000đ", category: "tranh-canvas" },
-  { name: "Tranh Tráng Gương Cá Và Sen", img: "./assets/img/kpt.tranhtrangguong3.jpg", price: "880.000đ", category: "tranh-trang-guong" },
-  { name: "Tranh Lụa Sơn Thuỷ", img: "./assets/img/kpt.tranhlua3.jpg", price: "655.000đ", category: "tranh-lua" },
-  { name: "Tranh Sơn Dầu Xanh Trong Trẻo", img: "./assets/img/kpt.tranhsondau3.jpg", price: "255.000đ", category: "tranh-son-dau" },
-  { name: "Tranh Canvas Hoa Trắng", img: "./assets/img/kpt.tranhcanvas1.jpg", price: "399.000đ", category: "tranh-canvas" },
-  { name: "Tranh Dải Ngân Sơn", img: "./assets/img/kpt.tranhphongcanh6.jpeg", price: "770.000đ", category: "tranh-chu-de" },
-  { name: "Tranh Đèn Led Cá Và Sen", img: "./assets/img/kpt.tranhdenled4.webp", price: "865.000đ", category: "tranh-den-led" },
+  { name: "Tranh Tráng Gương Sơn Vân", img: "./assets/img/kpt.tranhtrangguong4.webp", price: "980.000đ", category: "trang-guong" },
+  { name: "Tranh Đèn Led Hoa", img: "./assets/img/kpt.tranhdenled5.webp", price: "710.000đ", category: "den-led" },
+  { name: "Tranh Tam Cốc Mùa Lúa", img: "./assets/img/kpt.tranhphongcanhr5.jpeg", price: "700.000đ", category: "chu-de" },
+  { name: "Tranh Bộ Huyền Dạ", img: "./assets/img/kpt.tranhbo1.jpg", price: "750.000đ", category: "trang-guong" },
+  { name: "Tranh Đồng Hồ Đôi Hươu Tài Lộc", img: "./assets/img/kpt.tranhdongho4.webp", price: "650.000đ", category: "dong-ho" },
+  { name: "Tranh Ngư Thuỷ", img: "./assets/img/kpt.tranhbannguyet5.jpeg", price: "600.000đ", category: "trang-guong" },
+  { name: "Tranh Canvas Hoa", img: "./assets/img/kpt.tranhcanvas4.jpg", price: "600.000đ", category: "canvas" },
+  { name: "Tranh Bán Nguyệt Hươu Lộc", img: "./assets/img/kpt.tranhbannguyet4.webp", price: "750.000đ", category: "trang-guong" },
+  { name: "Tranh Đồng Hồ Lộc Nguyệt", img: "./assets/img/kpt.tranhdongho3.webp", price: "620.000đ", category: "dong-ho" },
+  { name: "Tranh Canvas Thanh Hoa", img: "./assets/img/kpt.tranhcanvas3.jpg", price: "430.000đ", category: "canvas" },
+  { name: "Tranh Tráng Gương Cá Và Sen", img: "./assets/img/kpt.tranhtrangguong3.jpg", price: "880.000đ", category: "trang-guong" },
+  { name: "Tranh Sơn Dầu Xanh Trong Trẻo", img: "./assets/img/kpt.tranhsondau3.jpg", price: "255.000đ", category: "son-dau" },
+  { name: "Tranh Canvas Hoa Trắng", img: "./assets/img/kpt.tranhcanvas1.jpg", price: "399.000đ", category: "canvas" },
+  { name: "Tranh Dải Ngân Sơn", img: "./assets/img/kpt.tranhphongcanh6.jpeg", price: "770.000đ", category: "chu-de" },
+  { name: "Tranh Đèn Led Cá Và Sen", img: "./assets/img/kpt.tranhdenled4.webp", price: "865.000đ", category: "den-led" },
+  { name: "Tranh Sơn Dầu Phố Cổ Hà Nội", img: "./assets/img/kpt.tranhsondau4.jpg", price: "235.000đ", category: "son-dau" },
+  { name: "Tranh Thuận Buồm Xuôi Gió", img: "./assets/img/kpt.tranhchudetbxg.jpg", price: "520.000đ", category: "chu-de" },
+  { name: "Tranh Tứ Quý Xuân Hạ Thu Đông", img: "./assets/img/tranhtuquy1.jpg", price: "300.000đ", category: "trang-guong" },
+  { name: "Tranh Đèn Led Sơn Lộc", img: "./assets/img/kpt.tranhdenled3.webp", price: "450.000đ", category: "den-led" },
+  { name: "Tranh Núi Non", img: "./assets/img/kpt.tranhphongcanh3.jpeg", price: "450.000đ", category: "phong-canh" },
+  { name: "Tranh Sơn Thuỷ Hữu Tình", img: "./assets/img/kpt.sonthuy1.jpeg", price: "400.000đ", category: "phong-canh" },
+  { name: "Tranh Bộ Năm Mùa Thu", img: "./assets/img/kpt.bo5.jpeg", price: "380.000đ", category: "trang-guong" },
+  { name: "Tranh Đèn Led Cá Và Trăng", img: "./assets/img/kpt.tranhdenled1.webp", price: "480.000đ", category: "den-led" },
+  { name: "Tranh Phong Cảnh Nhật Bản", img: "./assets/img/kpt.tranhphongcanh2.jpeg", price: "510.000đ", category: "phong-canh" },
+
+
+
 ];
-
-
 let currentPage = 1;
 const itemsPerPage = 12;
 let currentCategory = "all";

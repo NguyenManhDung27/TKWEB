@@ -464,6 +464,9 @@ footer .fab,
 footer .fa {
   color: #f7f3eb !important; 
 }
+footer .text-start {
+  padding: 40px;
+}
 
 /* Nút cuộn lên đầu trang */
 footer .btn.rounded-circle {
