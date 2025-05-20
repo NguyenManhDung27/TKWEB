@@ -1,1 +1,157 @@
 
+.breadcrumb {
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #333;
+  margin-right: 5px;
+  text-decoration: none;
+}
+.breadcrumb span {
+  margin: 0 5px;
+}
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fdf0d5;
+  padding: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title span {
+  background-color: #5b3e3c; 
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.section-title .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #5b3e3c; 
+}
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #666;
+}
+.trangguong-categories {
+  display: flex;
+  justify-content: center; /* canh giữa */
+  gap: 40px; /* khoảng cách giữa các thể loại */
+  flex-wrap: wrap; /* nếu nhỏ màn hình thì xuống dòng */
+  margin-bottom: 40px;
+}
+
+.trangguong-categories > div {
+  text-align: center;
+  cursor: pointer;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trangguong-categories > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+}
+
+.category-img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover; /* ảnh không bị méo */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: filter 0.3s ease;
+}
+
+.trangguong-categories > div:hover .category-img {
+  filter: brightness(0.9);
+}
+
+.trangguong-categories p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  user-select: none;
+}
+.card-img-top {
+  width: 100%;        /* Ảnh chiếm hết chiều rộng khung */
+  height: 250px;      /* Chiều cao cố định cho khung ảnh, bạn có thể chỉnh theo ý */
+  object-fit: cover;  /* Ảnh sẽ được cắt vừa đủ, không bị biến dạng */
+  object-position: center center; /* Ảnh sẽ căn giữa */
+  display: block;     /* Loại bỏ khoảng trắng dưới ảnh */
+}
+.custom-img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Giữ tỉ lệ vuông */
+  object-fit: cover;    /* Cắt ảnh vừa khung */
+  border-radius: 50%;   /* Hình tròn */
+  border: 1px solid #000; /* Viền */
+  display: block;
+  margin: 0 auto 0.5rem auto; /* Căn giữa và margin dưới */
+}
+.image-content img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+
+.theme-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.theme-item {
+  text-align: center;
+  width: 130px;
+}
+
+.theme-item img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0; /* ảnh hình chữ nhật */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.theme-item p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+
+
