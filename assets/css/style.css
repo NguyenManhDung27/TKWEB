@@ -465,7 +465,8 @@ footer .fa {
   color: #f7f3eb !important; 
 }
 footer .text-start {
-  padding: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 /* Nút cuộn lên đầu trang */

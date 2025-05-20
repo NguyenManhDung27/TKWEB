@@ -1,4 +1,8 @@
-
+body {
+  padding: 0;
+  background-color: #dfc3ae !important;
+  margin: 0;
+}
 .breadcrumb {
   font-size: 14px;
   margin: 20px 0;
@@ -59,9 +63,9 @@
 }
 .trangguong-categories {
   display: flex;
-  justify-content: center; /* canh giữa */
-  gap: 40px; /* khoảng cách giữa các thể loại */
-  flex-wrap: wrap; /* nếu nhỏ màn hình thì xuống dòng */
+  justify-content: center; 
+  gap: 40px; 
+  flex-wrap: wrap; 
   margin-bottom: 40px;
 }
 
@@ -70,6 +74,7 @@
   cursor: pointer;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f7f3eb;
 }
 
 .trangguong-categories > div:hover {
@@ -94,7 +99,7 @@
 .trangguong-categories p {
   font-weight: 600;
   font-size: 1rem;
-  color: #333;
+  color: #5b3e3c;
   margin: 0;
   user-select: none;
 }
@@ -105,12 +110,15 @@
   object-position: center center; /* Ảnh sẽ căn giữa */
   display: block;     /* Loại bỏ khoảng trắng dưới ảnh */
 }
+.detail{
+  background-color: #f7f3eb;
+  }
 .custom-img {
   width: 100%;
   aspect-ratio: 1 / 1; /* Giữ tỉ lệ vuông */
   object-fit: cover;    /* Cắt ảnh vừa khung */
   border-radius: 50%;   /* Hình tròn */
-  border: 1px solid #000; /* Viền */
+  border: 1px solid #5b3e3c; /* Viền */
   display: block;
   margin: 0 auto 0.5rem auto; /* Căn giữa và margin dưới */
 }
@@ -145,7 +153,7 @@
   height: 130px;
   object-fit: cover;
   border-radius: 0; /* ảnh hình chữ nhật */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px #5b3e3c;
 }
 
 .theme-item p {
