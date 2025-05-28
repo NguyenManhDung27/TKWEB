@@ -1,10 +1,11 @@
-const bestSellingProducts = [
+window.bestSellingProducts = [
   {
     name: "Tranh Tráng Gương Đôi Hươu",
     img: "assets/img/gia-tranh-trang-guong-2.jpg",
     price: "750.000đ",
     oldPrice: "1.150.000đ"
   },
+
   {
     name: "Tranh Tứ Quý Xuân Hạ Thu Đông",
     img: "assets/img/tranhtuquy11.jpg",
@@ -62,7 +63,7 @@ const bestSellingProducts = [
 ];
 
 
-const products = [
+window.products = [
   { name: "Tranh Tráng Gương Sơn Vân", img: "./assets/img/kpt.tranhtrangguong4.webp", price: "980.000đ", category: "trang-guong" },
   { name: "Tranh Đèn Led Hoa", img: "./assets/img/kpt.tranhdenled5.webp", price: "710.000đ", category: "den-led" },
   { name: "Tranh Tam Cốc Mùa Lúa", img: "./assets/img/kpt.tranhphongcanhr5.jpeg", price: "700.000đ", category: "chu-de" },
@@ -105,18 +106,23 @@ function renderProducts() {
     currentPage * itemsPerPage
   );
 
-  container.innerHTML = paginated.map(p => `
-    <div class="col-md-3 mb-4">
-      <div class="card text-white">
+container.innerHTML = paginated.map((p, index) => `
+  <div class="col-md-3 mb-4">
+    <div class="card text-white">
+      <a href="pages/detail.html?index=${index + (currentPage - 1) * itemsPerPage}" style="text-decoration:none; color:inherit;">
         <img src="${p.img}" class="card-img" alt="${p.name}" style="height: 250px; object-fit: cover;">
         <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded">
           <h5 class="card-title">${p.name}</h5>
           <p class="card-text fw-bold">${p.price}</p>
-          <a href="#" class="btn btn-sm btn-light">Mua ngay</a>
+          <a href="pages/detail.html?index=${index + (currentPage - 1) * itemsPerPage}" class="btn btn-sm btn-light">Xem chi tiết</a>
         </div>
-      </div>
+      </a>
     </div>
-  `).join("");
+  </div>
+`).join("");
+
+
+
 
   renderPagination(filtered.length);
 }
