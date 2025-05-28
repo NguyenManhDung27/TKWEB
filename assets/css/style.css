@@ -402,7 +402,127 @@ body {
   background-color: #d5bfa3;
   color: white;
 }
-
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(91, 58, 26, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+/* Popup Content */
+.popup-content {
+  background: #fff4e6;
+  border-radius: 18px;
+  max-width: 600px;
+  width: 90%;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgb(101 67 33 / 0.3);
+  position: relative;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.3s ease;
+}
+.popup-overlay.show .popup-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #5b3a1a;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+.close-btn:hover {
+  color: #a05a2c;
+}
+/* Popup Image */
+.popup-content img {
+  max-height: 320px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.popup-content h5 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: #5b3a1a;
+}
+.popup-content p.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #a05a2c;
+  margin-bottom: 15px;
+}
+.popup-content p.description {
+  font-size: 1rem;
+  color: #6b4c27;
+  line-height: 1.5;
+}
+/* Size Container */
+.size-container {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #e8c89a;
+  border-radius: 10px;
+  background: #fffaf0;
+}
+.size-label {
+  display: block;
+  font-size: 1.1rem;
+  color: #5b3a1a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* Size Options */
+.size-options {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.size-btn {
+  padding: 8px 15px;
+  border: 2px solid #5b3a1a;
+  background: transparent;
+  color: #5b3a1a;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.size-btn.active {
+  background: #5b3a1a;
+  color: #e8c89a;
+}
+.size-btn:hover {
+  background: #a05a2c;
+  color: #e8c89a;
+}
+/* Rating and Purchases */
+.popup-content p.rating {
+  font-size: 1rem;
+  color: #5b3a1a;
+  margin-bottom: 10px;
+}
+.popup-content p.rating i {
+  color: #f1c40f; /* Màu vàng cho ngôi sao */
+}
+.popup-content p.purchases {
+  font-size: 1rem;
+  color: #5b3a1a;
+  margin-bottom: 15px;
+}
 /* ==== CARD CHUNG ==== */
 #kham-pha-san-pham.card {
   border-radius: 12px;
