@@ -86,6 +86,7 @@ body {
     padding: 2px 6px;
     border-radius: 50%;
   }
+  
   /* ___________ navi_______________*/
 .menu { background: #5a3e2b; box-shadow: 0 2px 4px #f7f3eb; padding: 10px 0; }
 .btn { 
@@ -262,6 +263,8 @@ body {
   .flash-sale .carousel-item {
     background-color: #f7f3eb;
   }
+
+ 
   /* Đảm bảo section có khoảng cách với phần trên */
 /* Đảm bảo các cột giữ chiều cao đều */
 #product-list .col {
@@ -278,6 +281,12 @@ body {
   transition: transform 0.2s ease;
   background-color: #fff;
 }
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
 
 #product-list .card:hover {
   transform: translateY(-5px);

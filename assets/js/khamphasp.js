@@ -1,3 +1,66 @@
+const bestSellingProducts = [
+  {
+    name: "Tranh Tráng Gương Đôi Hươu",
+    img: "assets/img/gia-tranh-trang-guong-2.jpg",
+    price: "750.000đ",
+    oldPrice: "1.150.000đ"
+  },
+  {
+    name: "Tranh Tứ Quý Xuân Hạ Thu Đông",
+    img: "assets/img/tranhtuquy11.jpg",
+    price: "700.000đ",
+    oldPrice: "1.200.000đ"
+  },
+  {
+    name: "Tranh Bộ 3 Phong Cảnh",
+    img: "assets/img/tranhbophongcanh.jpg",
+    price: "980.000đ",
+    oldPrice: "1.430.000đ"
+  },
+  {
+    name: "Tranh Bán Nguyệt Hoa Sen",
+    img: "assets/img/tranh-ban-nguyet-23470115.jpg",
+    price: "650.000đ",
+    oldPrice: "900.000đ"
+  },
+  {
+    name: "Tranh Tráng Gương Phong Cảnh",
+    img: "assets/img/O1CN01YhP0Jt1NLJr1vo4ca_2207958381553-min.jpg",
+    price: "1.200.000đ",
+    oldPrice: "1.340.000đ"
+  },
+  {
+    name: "Tranh Mã Đáo Thành Công",
+    img: "assets/img/4945b1e6926c3a32637d.jpg",
+    price: "999.000đ",
+    oldPrice: "1.400.000đ"
+  },
+  {
+    name: "Tranh Tráng Gương Lá Bạch Quả",
+    img: "assets/img/Tranh-Hinh-Tron-Trang-Guong-3D-La-Bach-Qua-Va-2-Chu-Huou-TTG076.jpg",
+    price: "890.000đ",
+    oldPrice: "1.120.000đ"
+  },
+  {
+    name: "Tranh Đèn Led Cá Và Sen",
+    img: "assets/img/tranh-den-led-phong-khach-ca-va-sen.jpg",
+    price: "710.000đ",
+    oldPrice: "900.000đ"
+  },
+  {
+    name: "Tranh Tráng Gương Đôi Công",
+    img: "assets/img/tranh-trang-guong-8.jpg",
+    price: "750.000đ",
+    oldPrice: "980.000đ"
+  },
+  {
+    name: "Tranh Đồng Hồ Sơn Thuỷ",
+    img: "assets/img/Tranh đồng hô1.webp",
+    price: "500.000đ",
+    oldPrice: "740.000đ"
+  }
+];
+
 
 const products = [
   { name: "Tranh Tráng Gương Sơn Vân", img: "./assets/img/kpt.tranhtrangguong4.webp", price: "980.000đ", category: "trang-guong" },
@@ -81,6 +144,7 @@ function goToPage(page) {
 
 document.addEventListener("DOMContentLoaded", function () {
   renderProducts();
+  renderBestSellingProducts();
 
   const categoryFilter = document.getElementById("category-filter");
   if (categoryFilter) {
@@ -97,5 +161,84 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const searchIcon = document.getElementById("searchIcon");
 
+  if (!searchInput || !searchIcon) return;
 
+  searchIcon.addEventListener("click", handleSearch);
+  searchInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") handleSearch();
+  });
+
+  function handleSearch() {
+    const keyword = searchInput.value.trim().toLowerCase();
+    filterProductsByKeyword(keyword);
+    filterBestSellingByKeyword(keyword);
+
+  }
+  function filterBestSellingByKeyword(keyword) {
+    const matched = bestSellingProducts.filter(p =>
+      p.name.toLowerCase().includes(keyword)
+    );
+    renderBestSellingProducts(matched);
+  }
+  
+  function filterProductsByKeyword(keyword) {
+    const container = document.getElementById("explore-products");
+    if (!container) return;
+
+    const matchedProducts = products.filter(p =>
+      p.name.toLowerCase().includes(keyword)
+    );
+
+    const paginated = matchedProducts.slice(0, itemsPerPage); // chỉ trang đầu
+
+    container.innerHTML = paginated.map(p => `
+      <div class="col-md-3 mb-4">
+        <div class="card text-white">
+          <img src="${p.img}" class="card-img" alt="${p.name}" style="height: 250px; object-fit: cover;">
+          <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded">
+            <h5 class="card-title">${p.name}</h5>
+            <p class="card-text fw-bold">${p.price}</p>
+            <a href="#" class="btn btn-sm btn-light">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    renderPagination(matchedProducts.length);
+    currentCategory = "all"; // reset lại lọc danh mục nếu có
+  }
+});
+function renderBestSellingProducts(productsToRender = bestSellingProducts) {
+  const carouselInner = document.querySelector("#flashSaleCarousel .carousel-inner");
+  if (!carouselInner) return;
+
+  carouselInner.innerHTML = "";
+
+  const chunkSize = 5;
+  for (let i = 0; i < productsToRender.length; i += chunkSize) {
+    const items = productsToRender.slice(i, i + chunkSize);
+
+    const cardsHtml = items.map(p => `
+      <div class="card me-3" style="width: 18rem;">
+        <img src="${p.img}" class="card-img-top" alt="${p.name}">
+        <div class="card-body text-center">
+          <h5 class="card-title">${p.name}</h5>
+          <p class="fw-bold text-brown custom-font">${p.price} <small class="text-muted text-decoration-line-through">${p.oldPrice}</small></p>
+          <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
+        </div>
+      </div>
+    `).join("");
+
+    carouselInner.innerHTML += `
+      <div class="carousel-item ${i === 0 ? "active" : ""}">
+        <div class="d-flex justify-content-between">
+          ${cardsHtml}
+        </div>
+      </div>
+    `;
+  }
+}

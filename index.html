@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -23,9 +22,9 @@
         <div class="header-container">
         <img src = "assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
         <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Tìm kiếm sản phẩm...">
-        </div>
+          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
+      </div>
           <div class="account-cart">
             <div class="account">
               <i class="fa-regular fa-user"></i>
@@ -81,7 +80,7 @@
       <div class="container">
         <button id="toggle">☰</button>
         <div id="menu">
-          <a class="btn active" href="index.html" data-cat="all">Trang Chủ</a>
+          <a class="btn active " href="index.html" data-cat="all">Trang Chủ</a>
     
           <div class="drop-wrap">
             <a class="btn" href="pages/tranh_trang_guong.html" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
@@ -103,7 +102,7 @@
             <div class="drop">
               <a href="pages/phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
               <a href="pages/ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
-              <a href="pages/thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
+              <a class="btn active" href="pages/thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
               <a href="pages/son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
             </div>
           </div>
@@ -118,98 +117,11 @@
         <h2 class="fw-bold text-brown text-center custom-font">SẢN PHẨM BÁN CHẠY</h2>
         <div id="countdown" class="text-end text-dark fw-bold"></div>
       </div>
+  
       <div id="flashSaleCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-between">
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/gia-tranh-trang-guong-2.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Tráng Gương Đôi Hươu</h5>
-                  <p class=" fw-bold text-brown custom-font">750.000đ <small class="text-muted text-decoration-line-through">1.150.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem; ">
-                <img src="assets/img/tranhtuquy11.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Tứ Quý Xuân Hạ Thu Đông </h5>
-                  <p class="fw-bold text-brown custom-font">700.000đ <small class="text-muted text-decoration-line-through">1.200.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/tranhbophongcanh.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Bộ 3 Phong Cảnh </h5>
-                  <p class="fw-bold text-brown custom-font">980.000đ <small class="text-muted text-decoration-line-through">1.430.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/tranh-ban-nguyet-23470115.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Bán Nguyệt Hoa Sen</h5>
-                  <p class="fw-bold text-brown custom-font">650.000đ <small class="text-muted text-decoration-line-through">900.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/O1CN01YhP0Jt1NLJr1vo4ca_2207958381553-min.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Tráng Gương Phong Cảnh </h5>
-                  <p class="fw-bold text-brown custom-font">1.200.000đ <small class="text-muted text-decoration-line-through">1.340.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-between">
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/4945b1e6926c3a32637d.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Mã Đáo Thành Công</h5>
-                  <p class="fw-bold text-brown custom-font">999.000đ <small class="text-muted text-decoration-line-through">1.400.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/Tranh-Hinh-Tron-Trang-Guong-3D-La-Bach-Qua-Va-2-Chu-Huou-TTG076.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Tráng Gương Lá Bạch Quả</h5>
-                  <p class="fw-bold text-brown custom-font">890.000đ <small class="text-muted text-decoration-line-through">1.120.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/tranh-den-led-phong-khach-ca-va-sen.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Đèn Led Cá Và Sen</h5>
-                  <p class="fw-bold text-brown custom-font">710.000đ <small class="text-muted text-decoration-line-through">900.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/tranh-trang-guong-8.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Tráng Gương Đôi Công</h5>
-                  <p class="fw-bold text-brown custom-font">750.000đ <small class="text-muted text-decoration-line-through">980.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-              <div class="card me-3" style="width: 18rem;">
-                <img src="assets/img/Tranh đồng hô1.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tranh Đồng Hồ Sơn Thuỷ </h5>
-                  <p class="fw-bold text-brown custom-font">500.000đ <small class="text-muted text-decoration-line-through">740.000đ</small></p>
-                  <a href="#" class="btn btn-sm btn-danger">Mua ngay</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <!-- Controls -->
+        <!-- Nút điều hướng -->
         <button class="carousel-control-prev" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
         </button>
@@ -218,7 +130,8 @@
         </button>
       </div>
     </div>
-  </section>  
+  </section>
+  
       <!-- Khám phá các sản phẩm -->
       <div class="explore-wrapper ">
         <section class="product-explore "> 

@@ -25,9 +25,9 @@
         <div class="header-container">
         <img src = "../assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
         <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Tìm kiếm sản phẩm...">
-        </div>
+          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
+      </div>
           <div class="account-cart">
             <div class="account">
               <i class="fa-regular fa-user"></i>
@@ -83,15 +83,15 @@
       <div class="container">
         <button id="toggle">☰</button>
         <div id="menu">
-          <a class="btn active" href="index.html" data-cat="all">Trang Chủ</a>
+          <a class="btn" href="../index.html" data-cat="all">Trang Chủ</a>
     
           <div class="drop-wrap">
-            <a class="btn" href="#" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
+            <a class="btn active"href="#" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
             <div class="drop">
               <a href="tranh_bo.html" data-cat="bo-ba">Tranh Bộ Ba</a>
               <a href="tranh_tu_quy.html" data-cat="tu-quy">Tranh Tứ Quý</a>
               <a href="tranh_bo_nam.html" data-cat="bo-nam">Tranh Bộ Năm</a>
-              <a href="tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
+              <a class="btn active" href="tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
           </div>
           </div>
     
@@ -139,7 +139,7 @@
          </div>
         </div>
 
-      <div class="col-6 col-md-3">
+      <div class="col-6 col-md-3 ">
         <img src="../assets/img/tron2.jpg" alt="Tranh tròn 2" class="rounded-circle border custom-img mb-2">
         <p class="fw-semibold mb-1">Tranh tròn Hươu Vàng</p>
      <p class="text-success small mb-1">FREESHIP</p>

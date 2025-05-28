@@ -95,7 +95,10 @@ body {
 .trangguong-categories > div:hover .category-img {
   filter: brightness(0.9);
 }
-
+.col-6.col-md-3 img {
+  display: block !important; /* Đảm bảo ảnh không bị ẩn */
+  opacity: 1 !important; /* Đảm bảo không bị mờ */
+}
 .trangguong-categories p {
   font-weight: 600;
   font-size: 1rem;

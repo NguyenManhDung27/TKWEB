@@ -24,9 +24,9 @@
         <div class="header-container">
         <img src = "../assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
         <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Tìm kiếm sản phẩm...">
-        </div>
+          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
+      </div>
           <div class="account-cart">
             <div class="account">
               <i class="fa-regular fa-user"></i>
@@ -82,7 +82,7 @@
       <div class="container">
         <button id="toggle">☰</button>
         <div id="menu">
-          <a class="btn active" href="index.html" data-cat="all">Trang Chủ</a>
+          <a class="btn active" href="../index.html" data-cat="all">Trang Chủ</a>
     
           <div class="drop-wrap">
             <a class="btn" href="#" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
@@ -103,7 +103,7 @@
             <a class="btn" href="#" data-cat="chu-de">Tranh Theo Chủ Đề ▾</a>
             <div class="drop">
               <a href="phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
-              <a href="ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
+              <a class="btn active" href="ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
               <a href="thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
               <a href="son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
             </div>
