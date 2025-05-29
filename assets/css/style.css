@@ -408,17 +408,28 @@ body {
   inset: 0;
   background: rgba(91, 58, 26, 0.85);
   display: none;
+  padding: 40px 40px; 
   align-items: center;
   justify-content: center;
   z-index: 9999;
   backdrop-filter: blur(4px);
+  flex-direction: column; 
+  overflow: hidden;
+ 
+}
+.popup-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1; 
 }
 /* Popup Content */
 .popup-content {
   background: #fff4e6;
   border-radius: 18px;
-  max-width: 600px;
+  max-width: 650px;
+  height: 90vh;
   width: 90%;
+  overflow: auto;
   padding: 25px 30px;
   box-shadow: 0 10px 30px rgb(101 67 33 / 0.3);
   position: relative;
@@ -455,15 +466,10 @@ body {
 }
 .popup-content h5 {
   margin: 0 0 10px 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #5b3a1a;
 }
-.popup-content p.price {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #a05a2c;
-  margin-bottom: 15px;
-}
+
 .popup-content p.description {
   font-size: 1rem;
   color: #6b4c27;
@@ -471,7 +477,7 @@ body {
 }
 /* Size Container */
 .size-container {
-  margin: 15px 0;
+  margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #e8c89a;
   border-radius: 10px;
@@ -479,24 +485,25 @@ body {
 }
 .size-label {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #5b3a1a;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 /* Size Options */
 .size-options {
   margin: 0;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .size-btn {
-  padding: 8px 15px;
-  border: 2px solid #5b3a1a;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #5b3a1a;
   background: transparent;
   color: #5b3a1a;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -509,14 +516,48 @@ body {
   background: #a05a2c;
   color: #e8c89a;
 }
+
+/* Giá tiền*/
+.quantity-total-container {
+  margin-bottom: 10px; 
+}
+
+.quantity-label, .total-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 15px; 
+  color:#5b3a1a
+}
+
+.quantity-input {
+  gap: 5px; 
+}
+.quantity-input input {
+  max-width: 50px; 
+}
+
+.total-price p {
+  color: #8B4513; 
+  margin: 0; 
+}
+
+.quantity-input button {
+  padding: 2px 8px;
+}
+
+.rating, .purchases {
+  margin: 3px 0; 
+}
 /* Rating and Purchases */
 .popup-content p.rating {
   font-size: 1rem;
   color: #5b3a1a;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 .popup-content p.rating i {
-  color: #f1c40f; /* Màu vàng cho ngôi sao */
+  color: #f1c40f; 
 }
 .popup-content p.purchases {
   font-size: 1rem;
