@@ -1,4 +1,4 @@
-window.bestSellingProducts = [
+const bestSellingProducts = [
   {
     name: "Tranh Tráng Gương Đôi Hươu",
     img: "assets/img/gia-tranh-trang-guong-2.jpg",
@@ -63,7 +63,7 @@ window.bestSellingProducts = [
 ];
 
 
-window.products = [
+const products = [
   { name: "Tranh Tráng Gương Sơn Vân", img: "./assets/img/kpt.tranhtrangguong4.webp", price: "980.000đ", category: "trang-guong" },
   { name: "Tranh Đèn Led Hoa", img: "./assets/img/kpt.tranhdenled5.webp", price: "710.000đ", category: "den-led" },
   { name: "Tranh Tam Cốc Mùa Lúa", img: "./assets/img/kpt.tranhphongcanhr5.jpeg", price: "700.000đ", category: "chu-de" },
