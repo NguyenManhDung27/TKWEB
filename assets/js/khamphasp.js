@@ -87,8 +87,15 @@ const products = [
   { name: "Tranh Sơn Thuỷ Hữu Tình", img: "./assets/img/kpt.sonthuy1.jpeg", price: "400.000đ", category: "phong-canh" },
   { name: "Tranh Bộ Năm Mùa Thu", img: "./assets/img/kpt.bo5.jpeg", price: "380.000đ", category: "trang-guong" },
   { name: "Tranh Đèn Led Cá Và Trăng", img: "./assets/img/kpt.tranhdenled1.webp", price: "480.000đ", category: "den-led" },
-  { name: "Tranh Phong Cảnh Nhật Bản", img: "./assets/img/kpt.tranhphongcanh2.jpeg", price: "510.000đ", category: "phong-canh" },
+  { name: "Tranh Phong Cảnh Nhật Bản", img: "./assets/img/kpt.tranhphongcanh2.jpeg", price: "510.000đ", category: "phong-canh"
+    
+
+
+
+
+   },
 ];
+
 let currentPage = 1;
 const itemsPerPage = 12;
 let currentCategory = "all";
