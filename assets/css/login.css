@@ -5,7 +5,7 @@
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 30px;
     line-height: 1.7;
     color:saddlebrown;
     background-color:burlywood;
@@ -29,7 +29,7 @@ a:hover{
 }
 p {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
 }
 h4 {
@@ -45,7 +45,10 @@ h6 span {
     position: relative;
     width: 100%;
     display: block;
+    margin-top: 0;
+    padding-top: 0;
 }
+
 .full-height {
     min-height: 100vh;
 }
@@ -229,4 +232,10 @@ input:focus::-webkit-input-placeholder {
 
 .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
     transform: rotateY(180deg);
+}
+img {
+  display: block;
+  margin: 20px auto 10px auto; 
+  width: 300px;
+  height: 300px;
 }
