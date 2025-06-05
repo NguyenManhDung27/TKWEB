@@ -1,0 +1,736 @@
+[
+  {
+    "id":1,
+    "title":"Tranh tứ quý Mùa xuân",
+    "img": "../assets/img/tuquy6.jpg",
+    "price": 1200000
+  },
+  {
+    "id":2,
+    "title":"Tranh tứ quý phong cảnh",
+    "img": "../assets/img/tuquy1 (2).jpg",
+    "price": 1300000
+  },
+  {
+    "id":3,
+    "title":"Tranh tứ quý Mùa thu",
+    "img": "../assets/img/tuquy2.png",
+    "price": 1500000
+  },
+  {
+    "id":4,
+    "title":"Tranh tứ quý Tùng cúc trúc mai",
+    "img": "../assets/img/tuquy3.jpg",
+    "price": 1500000
+  },
+  {
+    "id":5,
+    "title":"Tranh tứ quý Cổ điển",
+    "img": "../assets/img/tuquycodien.jpeg",
+    "price": 1500000
+  },
+  {
+    "id":6,
+    "title":"Tranh tứ quý Cổ đại",
+    "img": "../assets/img/tuquy51.png",
+    "price": 700000
+  },
+  {
+    "id":7,
+    "title":"Tranh tứ quý Cửu ngư",
+    "img": "../assets/img/tuquy7.png",
+    "price": 700000
+  },
+  {
+    "id":8,
+    "title":"Tranh tứ quý Xuân Hạ Thu Đông",
+    "img": "../assets/img/tuquy8.jpg",
+    "price": 1100000
+  },
+  {
+    "id":9,
+    "title":"Tranh tròn Trừu Tượng tone xanh",
+    "img": "../assets/img/tron1.jpg",
+    "price": 400000
+  },
+  {
+    "id":10,
+    "title":"Tranh tròn Hươu Xanh",
+    "img": "../assets/img/tron2.jpg",
+    "price": 500000
+  },
+  {
+    "id":11,
+    "title":"Tranh tròn Phong Cảnh Núi Non",
+    "img": "../assets/img/tron3.jpg",
+    "price": 350000
+  },
+  {
+    "id":12,
+    "title":"Tranh tròn Trừu Tượng Tone Vàng",
+    "img": "../assets/img/tron4.jpg",
+    "price": 450000
+  },
+  {
+    "id":13,
+    "title":"Tranh tròn Trừu Tượng Núi Xanh",
+    "img": "../assets/img/tron5.jpg",
+    "price": 400000
+  },
+  {
+    "id":14,
+    "title":"Tranh tròn Cò Bay",
+    "img": "../assets/img/tron6.jpg",
+    "price": 500000
+  },
+  {
+    "id":15,
+    "title":"Tranh tròn Phong Cảnh Cặp Nai",
+    "img": "../assets/img/tron7.jpg",
+    "price": 350000
+  },
+  {
+    "id":16,
+    "title":"Tranh tròn Trừu Tượng Sen",
+    "img": "../assets/img/tron8.jpg",
+    "price": 450000
+  },
+  {
+    "id":17,
+    "title":"Tranh tròn Trừu Tượng",
+    "img": "../assets/img/tron1.jpg",
+    "price": 400000
+  },
+  {
+    "id":18,
+    "title":"Tranh tròn Hươu Vàng",
+    "img": "../assets/img/tron2.jpg",
+    "price": 500000
+  },
+  {
+    "id":19,
+    "title":"Tranh tròn Phong Cảnh",
+    "img": "../assets/img/tron1.jpeg",
+    "price": 350000
+  },
+  {
+    "id":20,
+    "title":"Tranh tròn Trừu Tượng",
+    "img": "../assets/img/tron4.jpg",
+    "price": 450000
+  },
+  {
+    "id":21,
+    "title":"Tranh bộ 5 Mùa Xuân",
+    "img": "../assets/img/bo5.jpg",
+    "price": 1200000
+  },
+  {
+    "id":22,
+    "title":"Tranh tứ quý 4 Mùa",
+    "img": "../assets/img/tuquy1 (2).jpg",
+    "price": 1500000
+  },
+  {
+    "id":23,
+    "title":"Tranh tròn Hươu Nai",
+    "img": "../assets/img/kpt.tranhbannguyet.jpg",
+    "price": 1500000
+  },
+  {
+    "id":24,
+    "title":"Tranh bộ ba Phong cảnh Mùa Thu",
+    "img": "../assets/img/bo3.jpg",
+    "price": 1500000
+  },
+  {
+    "id":25,
+    "title":"Tranh bộ 5",
+    "img": "../assets/img/bo53.jpg",
+    "price": 1500000
+  },
+  {
+    "id":26,
+    "title":"Tranh tứ quý",
+    "img": "../assets/img/tranhtuquy11.jpg",
+    "price": 700000
+  },
+  {
+    "id":27,
+    "title":"Tranh tròn",
+    "img": "../assets/img/bo36.gif",
+    "price": 700000
+  },
+  {
+    "id":28,
+    "title":"Tranh bộ ba",
+    "img": "../assets/img/bo32.jpg",
+    "price": 1100000
+  },
+  {
+    "id":29,
+    "title":"Tranh sơn dầu Sen",
+    "img": "../assets/img/kpt.tranhsondau1.webp",
+    "price": 1350000
+  },
+  {
+    "id":30,
+    "title":"Tranh sơn dầu trừu tượng tươi sáng trong lành",
+    "img": "../assets/img/kpt.tranhsondau2.jpg",
+    "price": 960000
+  },
+  {
+    "id":31,
+    "title":"Tranh sơn dầu Màu xanh nhẹ nhàng",
+    "img": "../assets/img/kpt.tranhsondau3.jpg",
+    "price": 1500000
+  },
+  {
+    "id":32,
+    "title":"Tranh sơn dầu Nhớ quê hương",
+    "img": "../assets/img/sondau1.jpg",
+    "price": 1500000
+  },
+  {
+    "id":33,
+    "title":"Tranh sơn dầu Mát mẻ",
+    "img": "../assets/img/sondau2.webp",
+    "price": 1500000
+  },
+  {
+    "id":34,
+    "title":"Tranh sơn dầu Làng quê Châu Âu",
+    "img": "../assets/img/sondau3.jpg",
+    "price": 700000
+  },
+  {
+    "id":35,
+    "title":"Tranh sơn dầu Hoa",
+    "img": "../assets/img/kpt.tranhsondau8.jpg",
+    "price": 700000
+  },
+  {
+    "id":36,
+    "title":"Tranh sơn dầu Người cô đơn",
+    "img": "../assets/img/kpt.tranhsondau9.jpg",
+    "price": 1100000
+  },
+  {
+    "id": 37,
+    "title":"Tranh Đồng Hồ Hoa Tulip",
+    "img": "../assets/img/dongho11.webp",
+    "price": 700000
+  },
+  {
+    "id":38,
+    "title":"Tranh Đồng Hồ Hoa Nhài",
+    "img": "../assets/img/dongho10.jpg",
+    "price": 900000
+  },
+  {
+    "id":39,
+    "title":"Tranh Đồng Hồ Hoa Hồng",
+    "img": "../assets/img/dongho9.jpg",
+    "price": 750000
+  },
+  {
+    "id":40,
+    "title":"Tranh Đồng Hồ Chim Sơn Ca Và Hoa Hồng",
+    "img": "../assets/img/dongho6.jpg",
+    "price": 900000
+  },
+  {
+    "id":41,
+    "title":"Tranh Đồng Hồ Hoa Và Cô Gái",
+    "img": "../assets/img/dongho12.webp",
+    "price": 520000
+  },
+  {
+    "id":42,
+    "title":"Tranh Đồng Hồ Con Hươu",
+    "img": "../assets/img/dongho14.jpeg",
+    "price": 680000
+  },
+  {
+    "id":43,
+    "title":"Tranh Đồng Hồ Sơn Thuỷ",
+    "img": "../assets/img/dongho15.jpeg",
+    "price": 820000
+  },
+  {
+    "id":44,
+    "title":"Tranh Đồng Hồ Lông Vũ",
+    "img": "../assets/img/dongho16.jpg",
+    "price": 880000
+  },
+  {
+    "id":45,
+    "title":"Tranh đèn led Hiện đại",
+    "img": "../assets/img/kpt.tranhdenled1.webp",
+    "price": 1000000
+  },
+  {
+    "id":46,
+    "title":"Tranh đèn led Lá phong",
+    "img": "../assets/img/kpt.tranhdenled2.webp",
+    "price": 1200000
+  },
+  {
+    "id":47,
+    "title":"Tranh đèn led Hươu nai Sơn thủy",
+    "img": "../assets/img/kpt.tranhdenled3.webp",
+    "price": 1500000
+  },
+  {
+    "id":48,
+    "title":"Tranh đèn led Cá xuôi dòng",
+    "img": "../assets/img/kpt.tranhdenled4.webp",
+    "price": 1200000
+  },
+  {
+    "id":49,
+    "title":"Tranh đèn led Hoa đơn giản",
+    "img": "../assets/img/kpt.tranhdenled5.webp",
+    "price": 1180000
+  },
+  {
+    "id":50,
+    "title":"Tranh đèn led Núi non",
+    "img": "../assets/img/tranhdenled2.webp",
+    "price": 700000
+  },
+  {
+    "id":51,
+    "title":"Tranh đèn led Cá và sen",
+    "img": "../assets/img/tranh-den-led-phong-khach-ca-va-sen.jpg",
+    "price": 700000
+  },
+  {
+    "id":52,
+    "title":"Tranh đèn led Mã đáo thành công",
+    "img": "../assets/img/kpt.tranhdenled8.png",
+    "price": 450000
+  },
+  {
+    "id":53,
+    "title":"Tranh Tam Cốc Mùa Lúa",
+    "img": "../assets/img/kpt.tranhphongcanhr5.jpeg",
+    "price": 700000
+  },
+  {
+    "id":54,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao1.png",
+    "price": 1350000
+  },
+  {
+    "id":55,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg2.jpg",
+    "price": 750000
+  },
+  {
+    "id":56,
+    "title":"Tranh Phong Cảnh Sơn Vân",
+    "img": "../assets/img/pcanh1.jpg",
+    "price": 1500000
+  },
+  {
+    "id":57,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy1.jpg",
+    "price": 1500000
+  },
+  {
+    "id":58,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao2.png",
+    "price": 1300000
+  },
+  {
+    "id":59,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg1.jpg",
+    "price": 900000
+  },
+  {
+    "id":60,
+    "title":"Tranh Phong Cảnh Hươu Rừng",
+    "img": "../assets/img/pcanh2.jpg",
+    "price": 700000
+  },
+  {
+    "id":61,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg.jpg",
+    "price": 800000
+  },
+  {
+    "id":62,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy2.webp",
+    "price": 800000
+  },
+  {
+    "id":63,
+    "title":"Tranh Phong Cảnh Nhật Bản",
+    "img": "../assets/img/pcanh3.jpg",
+    "price": 1100000
+  },
+  {
+    "id":64,
+    "title":"Tranh Mã Đáo Thành Công Khung Gỗ",
+    "img": "../assets/img/madao3.webp",
+    "price": 1500000
+  },
+  {
+    "id":65,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy3.webp",
+    "price": 800000
+  },
+  {
+    "id":66,
+    "title":"Tranh Cảnh Sông Nước",
+    "img": "../assets/img/pcanh4.jpg",
+    "price": 600000
+  },
+  {
+    "id":67,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg3.jpg",
+    "price": 900000
+  },
+  {
+    "id":68,
+    "title":"Tranh Phong Cảnh Ruộng Bậc Thang",
+    "img": "../assets/img/pcanh5.webp",
+    "price": 1500000
+  },
+  {
+    "id":69,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao4.webp",
+    "price": 1500000
+  },
+  {
+    "id":70,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy4.webp",
+    "price": 1200000
+  },
+  {
+    "id":71,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg4.webp",
+    "price": 1100000
+  },
+  {
+    "id":72,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao5.jpg",
+    "price": 1500000
+  },
+  {
+    "id":73,
+    "title":"Tranh Canvas Hoa",
+    "img": "../assets/img/kpt.tranhcanvas4.jpg",
+    "price": 600000
+  },
+  {
+    "id":74,
+    "title":"Tranh Canvas Thành Phố",
+    "img": "../assets/img/canvas5.jpg",
+    "price": 500000
+  },
+  {
+    "id":75,
+    "title":"Tranh Canvas Sơn Lâm Khổ Lớn",
+    "img": "../assets/img/canvas1.webp",
+    "price": 750000
+  },
+  {
+    "id":76,
+    "title":"Tranh Canvas Hoa Vàng",
+    "img": "../assets/img/canvas3.webp",
+    "price": 420000
+  },
+  {
+    "id":77,
+    "title":"Tranh Canvas Thanh Hoa",
+    "img": "../assets/img/kpt.tranhcanvas3.jpg",
+    "price": 430000
+  },
+  {
+    "id":78,
+    "title":"Tranh Canvas Hoa Xanh Khổ Dọc",
+    "img": "../assets/img/kpt.tranhcanvas2.webp",
+    "price": 410000
+  },
+  {
+    "id":79,
+    "title":"Tranh Canvas Cô Gái Và Hoa Cúc",
+    "img": "../assets/img/canvas2.webp",
+    "price": 580000
+  },
+  {
+    "id":80,
+    "title":"Tranh Canvas Hoa Hồng",
+    "img": "../assets/img/canvas6.jpg",
+    "price": 400000
+  },
+  {
+    "id":81,
+    "title":"Tranh bộ ba Đêm xuân",
+    "img": "../assets/img/kpt.tranhbo1.jpg",
+    "price": 1200000
+  },
+  {
+    "id":82,
+    "title":"Tranh bộ ba chữ nhật Hiện đại",
+    "img": "../assets/img/kpt.tranhbo2.jpg",
+    "price": 1300000
+  },
+  {
+    "id":83,
+    "title":"Tranh bộ khuyết Hươu nai",
+    "img": "../assets/img/kpt.tranhbo3.jpg",
+    "price": 1500000
+  },
+  {
+    "id":84,
+    "title":"Tranh bộ ba chữ nhật hoa Pastel",
+    "img": "../assets/img/kpt.tranhbo32.webp",
+    "price": 1500000
+  },
+  {
+    "id":85,
+    "title":"Tranh bộ khuyết Phong cảnh",
+    "img": "../assets/img/khuyetpk.webp",
+    "price": 1500000
+  },
+  {
+    "id":86,
+    "title":"Tranh bộ ba chữ nhật Pha lê",
+    "img": "../assets/img/Tranh-trang-guong-pha-le-FT121030.jpg",
+    "price": 700000
+  },
+  {
+    "id":87,
+    "title":"Tranh bộ 3 Thuận buồm",
+    "img": "../assets/img/bo32.jpg",
+    "price": 700000
+  },
+  {
+    "id":88,
+    "title":"Tranh bộ khuyết Cảnh núi non",
+    "img": "../assets/img/bo3canh.jpg",
+    "price": 1100000
+  },
+  {
+    "id":89,
+    "title":"Tranh bộ 5 Mùa Xuân",
+    "img": "../assets/img/bo5.jpg",
+    "price": 1200000
+  },
+  {
+    "id":90,
+    "title":"Tranh bộ 5 phong cảnh",
+    "img": "../assets/img/kpt.bo5.jpeg",
+    "price": 1500000
+  },
+  {
+    "id":91,
+    "title":"Tranh bộ 5 Mã đáo thành công",
+    "img": "../assets/img/bo54.jpg",
+    "price": 1500000
+  },
+  {
+    "id":92,
+    "title":"Tranh bộ 5 sơn thủy hữu tình",
+    "img": "../assets/img/bo5st.jpg",
+    "price": 1500000
+  },
+  {
+    "id":93,
+    "title":"Tranh bộ 5 Phong cảnh Hoa Anh Đào",
+    "img": "../assets/img/bo53.jpg",
+    "price": 1500000
+  },
+  {
+    "id":94,
+    "title":"Tranh bộ 5 Thuận buồm xuôi gió",
+    "img": "../assets/img/bo5thuanbuom.jpg",
+    "price": 700000
+  },
+  {
+    "id":95,
+    "title":"Tranh bộ 5 phong cảnh Mù Cang Chải",
+    "img": "../assets/img/bo5mucangchai.jpg",
+    "price": 700000
+  },
+  {
+    "id":96,
+    "title":"Tranh bộ 5 Mã đáo thành công tone xám",
+    "img": "../assets/img/bo5md2.jpg",
+    "price": 1100000
+  },
+  {
+    "id":97,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg2.jpg",
+    "price": 750000
+  },
+  {
+    "id":98,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg1.jpg",
+    "price": 900000
+  },
+  {
+    "id":99,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg.jpg",
+    "price": 800000
+  },
+  {
+    "id":100,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg3.jpg",
+    "price": 900000
+  },
+  {
+    "id":101,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/tbxg4.webp",
+    "price": 1100000
+  },
+
+  {
+    "id":102,
+    "title":"Tranh bộ 5 Thuận buồm xuôi gió",
+    "img": "../assets/img/bo5thuanbuom.jpg",
+    "price": 700000
+  },
+  {
+    "id":103,
+    "title":"Tranh Thuận Buồm Xuôi Gió",
+    "img": "../assets/img/thuanbuom7.png",
+    "price": 1230000
+  },
+  {
+    "id":104,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy1.jpg",
+    "price": 1500000
+  },
+  {
+    "id":105,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy2.webp",
+    "price": 800000
+  },
+  {
+    "id":106,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy3.webp",
+    "price": 850000
+  },
+  {
+    "id":107,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy4.webp",
+    "price": 1120000
+  },
+  {
+    "id":108,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy5.webp",
+    "price": 13100000
+  },
+  {
+    "id":109,
+    "title":"Tranh Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy6.webp",
+    "price": 1100000
+  },
+  {
+    "id":110,
+    "title":"Tranh Bộ Ba Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy7.webp",
+    "price": 1500000
+  },
+  {
+    "id":111,
+    "title":"Tranh Khổ Dọc Sơn Thuỷ Hữu Tình",
+    "img": "../assets/img/sonthuy8.jpg",
+    "price": 950000
+  },
+  {
+    "id":112,
+    "title":"Tranh Tam Cốc Mùa Lúa",
+    "img": "../assets/img/kpt.tranhphongcanhr5.jpeg",
+    "price": 700000
+  },
+  {
+    "id":113,
+    "title":"Tranh Phong Cảnh Sơn Vân",
+    "img": "../assets/img/pcanh1.jpg",
+    "price": 1500000
+  },
+  {
+    "id":114,
+    "title":"Tranh Phong Cảnh Hươu Rừng",
+    "img": "../assets/img/pcanh2.jpg",
+    "price": 700000
+  },
+  {
+    "id":115,
+    "title":"Tranh Phong Cảnh Nhật Bản",
+    "img": "../assets/img/pcanh3.jpg",
+    "price": 1100000
+  },
+  {
+    "id":116,
+    "title":"Tranh Cảnh Sông Nước",
+    "img": "../assets/img/pcanh4.jpg",
+    "price": 600000
+  },
+  {
+    "id":117,
+    "title":"Tranh Phong Cảnh Ruộng Bậc Thang",
+    "img": "../assets/img/pcanh5.webp",
+    "price": 1500000
+  },
+  {
+    "id":118,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao1.png",
+    "price": 1350000
+  },
+  {
+    "id":119,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao2.png",
+    "price": 1300000
+  },
+  {
+    "id":120,
+    "title":"Tranh Mã Đáo Thành Công Khung Gỗ",
+    "img": "../assets/img/madao3.webp",
+    "price": 1500000
+  },
+  {
+    "id":121,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao4.webp",
+    "price": 1500000
+  },
+  {
+    "id":122,
+    "title":"Tranh Mã Đáo Thành Công",
+    "img": "../assets/img/madao5.jpg",
+    "price": 1500000
+  }
+
+]
