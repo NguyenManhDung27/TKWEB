@@ -8,7 +8,8 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/detail.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTNET</title>
@@ -20,7 +21,7 @@
   <div class ="wrapper">
     <header>
         <div class="header-container">
-        <img src = "assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
+        <img src = "assets/img/logo-transparent.png" alt ="Logo" style = "width: 100px; height: 100px"> 
         <div class="search-box">
           <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
           <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
@@ -109,160 +110,287 @@
           </div>
         </div>
       </div>
-    </section>
+      <section class="weekly-pick">
+        <h4>ARTNET</h4>
+        <h1>TRANH MỚI NHẤT</h1>
+        <div class="art-grid">
+          <div class="art-card large" style="background-image: url('./assets/img/denled1.png');">
+            <div class="art-info">
+              <p class="title">Tranh Đèn Led</p>
+              <p class="sub-title">Tranh Đèn Led Sơn Lâm</p>
+            </div>
+          </div>
     
-  <!-- danh mục sản phẩm -->
-  <section class="flash-sale py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="fw-bold text-brown text-center custom-font">SẢN PHẨM BÁN CHẠY</h2>
-        <div id="countdown" class="text-end text-dark fw-bold"></div>
-      </div>
-  
-      <div id="flashSaleCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+          <div class="art-card" style="background-image: url('./assets/img/canvas6.jpg');">
+            <div class="art-info">
+              <p class="title">Tranh Canvas</p>
+              <p class="sub-title">Tranh Canvas Hoa</p>
+            </div>
+          </div>
+    
+          <div class="art-card" style="background-image: url('./assets/img/madao4.webp');">
+            <div class="art-info">
+              <p class="title">Tranh Chủ Đề </p>
+              <p class="sub-title">Mã Đáo Thành Công</p>
+            </div>
+          </div>
+    
+          <div class="art-card" style="background-image: url('./assets/img/kpt.tranhsondau7.jpg');">
+            <div class="art-info">
+              <p class="title">Tranh Sơn Dầu</p>
+              <p class="sub-title">Tranh Sơn Dầu Hoa Tulip</p>
+            </div>
+          </div>
+    
+          <div class="art-card" style="background-image: url('./assets/img/pcanh1.jpg');">
+            <div class="art-info">
+              <p class="title">TRANH PHONG CẢNH</p>
+              <p class="artist">Cảnh Núi Non</p>
+            </div>
+          </div>
+
+          <div class="art-card" style="background-image: url('./assets/img/sonthuy4.webp');">
+            <div class="art-info">
+              <p class="title">TRANH CHỦ ĐỀ</p>
+              <p class="artist">Sơn Thuỷ Hữu Tình</p>
+            </div>
+          </div>
         </div>
-        <!-- Nút điều hướng -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-        </button>
+      </section>
+   <!--khám phá thương hiệu-->
+<section class="brand-wrapper">
+  <div class="brand-title">
+    <h4>DISCOVER</h4>
+    <h1>KHÁM PHÁ CHỦ ĐỀ</h1>
+  </div>
+<div class="brand-container">
+  <!-- Thương hiệu 1 -->
+
+  <div class="brand-card" style="background-image: url('./assets/img/tranh-trang-guong-8.jpg')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH TRÁNG GƯƠNG</h2>
+      <p>Khám phá những bức tranh đặc sắc với đa dạng mẫu mã từ tranh bộ 3, tranh tứ quý, tranh bộ năm, tranh tròn</p>
+      <a href="./pages/tranh_trang_guong.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+  <!-- Thương hiệu 2 -->
+  <div class="brand-card" style="background-image: url('./assets/img/sonthuy5.webp')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH SƠN THUỶ HỮU TÌNH</h2>
+      <p>Những bức tranh với hình ảnh vừa sống động vừa nên thơ, phù hợp để bày trí không gian căn phòng của bạn</p>
+      <a href="./pages/son_thuy.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+  <!-- Thương hiệu 3 -->
+  <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhbannguyet5.jpeg')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH TRÒN</h2>
+      <p>Những bức tranh tròn, tranh bán nguyệt độc đáo không chỉ giúp căn phòng của bạn thêm sang trọng mà còn tạo cảm giác ấm cúng</p>
+       <a href="./pages/tranh_tron.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Thương hiệu 4 -->
+  <div class="brand-card" style="background-image: url('./assets/img/tranhnb.jpg')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH CANVAS</h2>
+      <p>Bộ sưu tập tranh canvas mới nhất từ ARTNET đang chờ bạn khám phá</p>
+       <a href="./pages/tranh_canvas.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Thương hiệu 55 -->
+  <div class="brand-card" style="background-image: url('./assets/img/dongho11.webp')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH ĐỒNG HỒ</h2>
+      <p>Tranh đồng hồ với phong cách hiện đại & tinh tế đem lại tiện ích cho không gian sống</p>
+      <a href="./pages/tranh_dong_ho.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+  <!-- Thương hiệu 66 -->
+  <div class="brand-card" style="background-image: url('./assets/img/tranhnb.webp')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH SƠN DẦU</h2>
+      <p>Những bức tranh mang vẻ đẹp mộc mạc gần gũi nhưng cũng không kém phần tinh tế</p>
+      <a href="./pages/tranh_son_dau.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+  <!-- Thương hiệu 7 -->
+  <div class="brand-card" style="background-image: url('./assets/img/tranhdenled2.webp')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH ĐÈN LED</h2>
+      <p>Với hình ảnh 3D sinh động và màu sắc mới mẻ, tranh đèn LED không chỉ là một tác phẩm nghệ thuật mà còn là một vật trang trí hiện đại</p>
+       <a href="./pages/tranh_den_led.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+  <!-- Thương hiệu 8 -->
+  <div class="brand-card" style="background-image: url('./assets/img/pcanh4.jpg')">
+    <div class="brand-overlay"></div>
+    <div class="brand-content">
+      <h2>TRANH THEO CHỦ ĐỀ</h2>
+      <p>ARTNET đem đến cho bạn những bức tranh với đa dạng chủ đề như tranh phong cảnh, tranh mã đáo thành công, thuận buồm xuôi gió, sơn thuỷ hữu tình</p>
+       <a href="./pages/tranh_chu_de.html">
+      <button>Khám phá</button>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+  
+  <!--BST mới-->
+      <section class="comming-soon">
+        <h4>Coming soon</h4>
+        <h1>BST TRANH HOA SEN SẮP RA MẮT</h1>
+        <div class="comming" id="gallery">
+        </div>
+      </section>
+
+      <section class="decor-section">
+        <div class="decor-image">
+          <img src="./assets/img/kpt.tranhdenled2.webp" alt="Dongho set">
+        </div>
+        <div class="decor-content">
+          <div class="text-box">
+            <h2>PHÙ HỢP TRANG TRÍ CĂN PHÒNG CỦA BẠN</h2>
+            <p>
+              Những bức tranh tinh tế, dễ dàng phối hợp với nhiều phong cách nội thất – từ tối giản hiện đại đến cổ điển sang trọng. Không chỉ đơn thuần là vật trang trí, mỗi tác phẩm còn là một điểm nhấn nghệ thuật, giúp không gian sống trở nên sinh động và có chiều sâu cảm xúc.<br>
+              Chúng mang lại cảm giác ấm cúng và thanh lịch, tạo nên bầu không khí riêng biệt cho từng căn phòng. Dù đặt trong phòng khách, phòng ngủ hay góc làm việc.
+            </p>
+            <div class="kpt-images">
+              <img src="./assets/img/kpt.tranhtrangguong1.jpg" alt="Tranh 1">
+              <img src="./assets/img/kpt.tranhsondau4.jpg" alt="Tranh 2">
+              <img src="./assets/img/kpt.tranhbannguyet4.webp" alt="Tranh 3">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+  <!--  Carousel Doanh Nghiệp Hợp Tác -->
+<div class="carousel-wrapper">
+  <h2 class="fw-bold text-brown">ĐỐI TÁC CỦA ARTNET</h2>
+    <div class="carousel-logo">
+    <div class="carousel">
+      <img src="./assets/img/logoghn.png" alt="Logo 2">
+      <img src="./assets/img/logolaz.png" alt="Logo 3">
+      <img src="./assets/img/logomomo.png" alt="Logo 4">
+      <img src="./assets/img/logotranhnanh.png" alt="Logo 5">
+      <img src="./assets/img/logotuongxinh.png" alt="Logo 6">
+      <img src="./assets/img/logovnpay.jpg" alt="Logo 7">
+      <img src="./assets/img/giao-hang-tiet-kiem16-1.png" alt="Logo 8">
+      <img src="./assets/img/logotranhtuong.jpeg"alt="Logo 9">
+      <img src="./assets/img/logophuchung.png" alt="Logo 10">
+      <img src="./assets/img/logo3dminhloi.jpeg" alt="Logo 11">
+      <img src="./assets/img/logoghn.png" alt="Logo 2">
+      <img src="./assets/img/logolaz.png" alt="Logo 3">
+      <img src="./assets/img/logomomo.png" alt="Logo 4">
+      <img src="./assets/img/logotranhnanh.png" alt="Logo 5">
+      <img src="./assets/img/logotuongxinh.png" alt="Logo 6">
+      <img src="./assets/img/logovnpay.jpg" alt="Logo 7">
+      <img src="images/logovietjet.png" alt="Logo 8">
+      <img src="images/logotech.png" alt="Logo 9">
+      <img src="images/logoviettin.png" alt="Logo 10">
+      <img src="images/logohotelnhatrang.jpg" alt="Logo 11">
+    </div>
+    </div>
+</div>
+  <section class="intro-banner">
+    <div class="overlay">
+      <h2>What is ArtNet</h2>
+      <p>"Chúng tôi không chỉ bán tranh – chúng tôi trao đi cảm xúc, thổi hồn vào từng góc nhỏ trong ngôi nhà của bạn."</p>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo-section">
+          <div class="footer-logo">
+            <img src="./assets/img/logo (1).png" alt="ARTNET Logo" style="height: 60px; width: 60px" />
+            <h1>ARTNET</h1>
+          </div>
+          <p class="footer-description">
+            Artnet tự hào đã bán ra hơn 16.000 sản phẩm, khẳng định chất lượng và uy tín trên thị trường.<br>
+            Đội ngũ khách hàng của Artnet đã vượt mốc 10.000 người, minh chứng cho sự yêu mến và ủng hộ từ cộng đồng!
+          </p>
+          <div class="footer-members">
+            <img src="./assets/img/anhnguoi.jpg" alt="">
+            <img src="./assets/img/anhnguoi2.webp" alt="">
+            <img src="./assets/img/anhnguoi3.jpg" alt="">
+            <span><strong>10.000</strong> Khách hàng đã tin tưởng </span>
+          </div>
+        </div>
+ 
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h6>VỀ CHÚNG TÔI</h6>
+            <ul>
+              <li><a href="#">Điều Khoản</a></li>
+              <li><a href="#">Liên Hệ</a></li>
+              <li><a href="#">Giới thiệu</a></li>
+             
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h6>LIÊN HỆ</h6>
+            <ul>
+              <li><i class="fas fa-map-marker-alt me-2"></i>12 Chùa Bộc, Đống Đa, Hà Nội</li>
+              <li><i class="fas fa-phone-alt  me-2"></i>0123 456 789</li>
+              <li><i class="fas fa-phone-alt  me-2"></i>0987 654 321</li>
+              <li><i class="fas fa-envelope  me-2"></i>artnetpic@gmail.com</li>
+              <li><i class="fas fa-envelope  me-2"></i>andecor@gmail.com.com</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h6>TRANH ARTNET</h6>
+            <ul>
+              <li><a href="pages/phong_canh.html">Tranh Phong Cảnh</a></li>
+              <li><a href="pages/tranh_son_dau.html">Tranh Sơn Dầu</a></li>
+              <li><a href="pages/tranh_chu_de.html">Tranh Chủ Đề</a></li>
+              <li><a href="pages/tranh_den_led.html">Tranh Đèn Led</a></li>
+              <li><a href="pages/tranh_dong_ho.html">Tranh Đồng Hồ</a></li>
+              <li><a href="pages/tranh_canvas.html">Tranh Canvas</a></li>
+            </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="footer-bottom">
+        <p>© <a href="#">ARTNET</a> 2025, All rights reserved.</p>
+        <ul>
+          <li><a href="#">Giao hàng nhanh chóng</a></li>
+          <li><a href="#">Phản hồi kịp thời</a></li>
+          <li><a href="#">Uy tín-chất lượng</a></li>
+        </ul>
       </div>
     </div>
   </section>
-  
-      <!-- Khám phá các sản phẩm -->
-      <div class="explore-wrapper ">
-        <section class="product-explore "> 
-          <div class="container">
-            <div class="py-4 text-left" > 
-            <h2 class="fw-bold text-brown custom-font"> SẢN PHẨM MỚI NHẤT</h2>
-          </div>
-            <div id="category-filter" class="btn-group d-flex flex-wrap justify-content-center mb-4"></div>
-            <div id="explore-products" class="row"></div>
-            <nav class="d-flex justify-content-center mt-4">
-              <ul class="pagination" id="pagination"></ul>
-            </nav>
-          </div>
-        </section>
-      </div>
-      </div>
-      
-      <section class="why-choose-us py-5 ">
-         
-  <div class="container">
-    <h2 class="fw-bold text-center text-brown custom-font mb-4">TẠI SAO CHỌN ARNET?</h2>
-    <div class="row text-center">
-      <div class="col-md-3">
-        <i class="fa-solid fa-award fa-2x text-danger mb-2"></i>
-        <h5>Chất lượng hàng đầu</h5>
-        <p class="small">Sản phẩm được in bằng công nghệ hiện đại, độ bền cao.</p>
-      </div>
-      <div class="col-md-3">
-        <i class="fa-solid fa-truck-fast fa-2x text-danger mb-2"></i>
-        <h5>Giao hàng toàn quốc</h5>
-        <p class="small">Nhanh chóng - an toàn - đúng hẹn.</p>
-      </div>
-      <div class="col-md-3">
-        <i class="fa-solid fa-shield-halved fa-2x text-danger mb-2"></i>
-        <h5>Bảo hành uy tín</h5>
-        <p class="small">1 đổi 1 nếu sản phẩm lỗi do nhà sản xuất.</p>
-      </div>
-      <div class="col-md-3">
-        <i class="fa-solid fa-headset fa-2x text-danger mb-2"></i>
-        <h5>Hỗ trợ 24/7</h5>
-        <p class="small">Tư vấn tận tình trước và sau mua hàng.</p>
-      </div>
-    </div>
-  </div>
-</section>
-      <!--footer -->
-      <div class="footer">
-      <footer class=" pt-5 border-top">
-        <div class="container">
-          <div class="row align-items-center mb-4">
-            <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
-              <img src="./assets/img/logo (1).png" alt="ARTNET Logo" style="height: 60px; width: 60px" class="me-3" />
-              <div>
-                <h5 class="fw-bold mb-1">ĐĂNG KÝ NHẬN TIN</h5>
-                <small class="text-muted">Nhận thông tin mới nhất từ chúng tôi</small>
-              </div>
-            </div>
-            <div class="col-md-6 d-flex">
-              <input type="email" class="form-control me-2 rounded-pill" placeholder="Nhập email của bạn" />
-              <button class="btn btn-danger rounded-pill px-4">
-                ĐĂNG KÝ →
-              </button>
-            </div>
-          </div>
-          <hr />
-        </div>
-          <div class="row text-start">
-            <div class="col-md-3 mb-4">
-              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">VỀ CHÚNG TÔI</h6>
-              <p class="small mt-2">
-                Artnet là thương hiệu được thành lập vào năm 2022 với tiêu chí đặt chất lượng sản phẩm lên hàng đầu.
-              </p>
-              <div class="d-flex gap-3">
-                <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a href="#"><i class="fab fa-whatsapp fa-lg"></i></a>
-              </div>
-            </div>
-      
-            <div class="col-md-3 mb-4">
-              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">LIÊN KẾT</h6>
-              <ul class="list-unstyled mt-2">
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">Sản Phẩm</a></li>
-                <li><a href="#">Điều khoản</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Tin tức</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3 mb-4">
-              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">SẢN PHẨM</h6>
-              <ul class="list-unstyled mt-2">
-                <li><a href="#">Tranh bộ</a></li>
-                <li><a href="pages/tranh_trang_guong.html">Tranh tráng gương</a></li>
-                <li><a href="#">Tranh Sơn Dầu</a></li>
-                <li><a href="pages/tranh_chu_de.html">Tranh Chủ Đề</a></li>
-                <li><a href="#">Tranh Đèn Led</a></li>
-                <li><a href="pages/tranh_dong_ho.html">Tranh Đồng Hồ</a></li>
-                <li><a href="pages/tranh_canvas.html">Tranh Canvas</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3 mb-4">
-              <h6 class="fw-bold border-bottom pb-1 border-danger d-inline-block">LIÊN HỆ</h6>
-              <ul class="list-unstyled mt-2">
-                <li><i class="fas fa-map-marker-alt text-danger me-2"></i>12 Chùa Bộc, Đống Đa, Hà Nội</li>
-                <li><i class="fas fa-phone-alt text-danger me-2"></i>0123 456 789</li>
-                <li><i class="fas fa-phone-alt text-danger me-2"></i>0987 654 321</li>
-                <li><i class="fas fa-envelope text-danger me-2"></i>artnetpic@gmail.com</li>
-                <li><i class="fas fa-envelope text-danger me-2"></i>andecor@gmail.com.com</li>
-              </ul>
-            </div>
-          </div>
-      
-          <div class="text-center py-3 small text-muted border-top mt-4">
-            Copyright 2022 Artnet. All Rights Reserved.
-          </div>
-        </div>
-        <a href="#" class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-4">
-          <i class="fas fa-arrow-up text-white"></i>
-        </a>
-      </footer>
-      
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/khamphasp.js"></script>
-    <script src="assets/js/dropdown.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/khamphasp.js"></script>
+  <script src="assets/js/dropdown.js"></script>
+  <script src="assets/js/detail.js"></script>
     </body>
+    </html>
 
-
-      
-      </body>
-      </html>
