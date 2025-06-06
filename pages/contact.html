@@ -281,7 +281,7 @@
             once: true
         });
 
-        // Form validation and submission
+        // Điền form
         const contactForm = document.getElementById('contactForm');
         const successMessage = document.getElementById('successMessage');
 
@@ -290,12 +290,12 @@
             event.stopPropagation();
 
             if (contactForm.checkValidity()) {
-                // Show success message
+                // Hiển thị nếu thành công
                 successMessage.classList.remove('d-none');
                 contactForm.reset();
                 contactForm.classList.remove('was-validated');
                 
-                // Hide success message after 5 seconds
+                // Tự tắt thông báo thành công sau 5 giây
                 setTimeout(() => {
                     successMessage.classList.add('d-none');
                 }, 5000);
@@ -304,7 +304,7 @@
             }
         });
 
-        // Custom validation for phone number
+        // Đặt điều kiện cho số điện thoại điền vào form
         const phoneInput = document.getElementById('phone');
         phoneInput.addEventListener('input', (event) => {
             const phoneNumber = event.target.value.replace(/\D/g, '');
@@ -317,7 +317,7 @@
             }
         });
 
-        // Add icons to form fields
+        // Thêm icon vào form
         document.querySelectorAll('.form-label').forEach(label => {
             const field = label.getAttribute('for');
             switch(field) {
