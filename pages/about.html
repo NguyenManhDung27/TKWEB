@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+            font-weight: 700;
+        }
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/kpt.tranhtrangguong1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .about-card {
+            background: linear-gradient(to bottom right, #fff, #f7f3eb);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(139, 94, 60, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+        .stats-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(139, 94, 60, 0.1);
+            transition: all 0.3s ease;
+        }
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        .stats-card i {
+            font-size: 2.5rem;
+            color: #8b5e3c;
+            margin-bottom: 20px;
+        }
+        .stats-card h3 {
+            color: #b77f54;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, #8b5e3c, #b77f54);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-content {
+            width: calc(50% - 30px);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(139, 94, 60, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            float: left;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            float: right;
+        }
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #8b5e3c, #b77f54);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -10px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+        .social-icons a {
+            color: #8b5e3c;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            color: #b77f54;
+            transform: translateY(-3px);
+        }
+        .certifications {
+            background: linear-gradient(to right, #f7f3eb, #fff);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        .certification-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .certification-item i {
+            font-size: 3rem;
+            color: #8b5e3c;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            .timeline::before {
+                left: 40px;
+            }
+            .timeline-content {
+                width: calc(100% - 70px);
+                float: right !important;
+            }
+            .timeline-dot {
+                left: 40px;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Chúng Tôi - ARTNET</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" sizes="180x180">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <img src="../assets/img/logo-transparent.png" alt="Logo" style="width: 80px; height: 80px">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                </div>
+                <div class="account-cart">
+                    <div class="account">
+                        <i class="fa-regular fa-user"></i>
+                        <div>
+                            <span>Đăng nhập / Đăng ký</span><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <button>
+                        <span class="badge"></span>
+                        <strong>Giỏ hàng</strong>
+                    </button>
+                </div>
+                <div id="lienhe">
+                    <i class="fa-solid fa-phone-volume"> + 0243569884</i>
+                </div>
+            </div>
+        </header>
+
+        <div class="about-hero">
+            <div class="container">
+                <h1 data-aos="fade-down">Chào Mừng Đến Với ARTNET</h1>
+                <p class="lead" data-aos="fade-up">Nơi Nghệ Thuật Gặp Gỡ Không Gian Sống</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="about-card">
+                        <h2 class="mb-4">Câu Chuyện Của Chúng Tôi</h2>
+                        <p>ARTNET được thành lập vào năm 2022 với khát vọng mang nghệ thuật đến gần hơn với cuộc sống của mọi người. Chúng tôi tin rằng mỗi bức tranh không chỉ là một tác phẩm nghệ thuật, mà còn là cầu nối giữa không gian sống và cảm xúc của con người.</p>
+                        <p>Với đội ngũ nghệ nhân tay nghề cao và công nghệ hiện đại, chúng tôi tự hào mang đến những sản phẩm chất lượng, độc đáo và phù hợp với nhiều phong cách nội thất khác nhau.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="about-card">
+                        <h2 class="mb-4">Giá Trị Cốt Lõi</h2>
+                        <ul>
+                            <li class="mb-3"><strong>Chất Lượng:</strong> Cam kết sử dụng vật liệu cao cấp và quy trình sản xuất nghiêm ngặt</li>
+                            <li class="mb-3"><strong>Sáng Tạo:</strong> Không ngừng đổi mới và phát triển các mẫu mã độc đáo</li>
+                            <li class="mb-3"><strong>Tận Tâm:</strong> Luôn lắng nghe và đáp ứng nhu cầu của khách hàng</li>
+                            <li class="mb-3"><strong>Uy Tín:</strong> Xây dựng niềm tin với khách hàng qua từng sản phẩm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 data-aos="fade-up">Thành Tựu Của Chúng Tôi</h2>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stats-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3 id="products-sold">16,000+</h3>
+                        <p>Sản phẩm đã bán</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stats-card">
+                        <i class="fas fa-users"></i>
+                        <h3 id="customers">10,000+</h3>
+                        <p>Khách hàng tin tưởng</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stats-card">
+                        <i class="fas fa-store"></i>
+                        <h3 id="dealers">500+</h3>
+                        <p>Đại lý phân phối</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stats-card">
+                        <i class="fas fa-star"></i>
+                        <h3 id="rating">4.9/5</h3>
+                        <p>Đánh giá từ khách hàng</p>
+                    </div>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+                <script src="https://assets.codepen.io/16327/ScrambleTextPlugin3.min.js"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        gsap.to("#products-sold", {
+                            duration: 5,
+                            scrambleText: {
+                                text: "16,000+",
+                                chars: "0123456789,",
+                                revealDelay: 0.5
+                            },
+                            ease: "power1.inOut"
+                        });
+                        gsap.to("#customers", {
+                            duration: 5,
+                            scrambleText: {
+                                text: "10,000+",
+                                chars: "0123456789,",
+                                revealDelay: 0.5
+                            },
+                            ease: "power1.inOut"
+                        });
+                        gsap.to("#dealers", {
+                            duration: 5,
+                            scrambleText: {
+                                text: "500+",
+                                chars: "0123456789+",
+                                revealDelay: 0.5
+                            },
+                            ease: "power1.inOut"
+                        });
+                        gsap.to("#rating", {
+                            duration: 5,
+                            scrambleText: {
+                                text: "4.9/5",
+                                chars: "0123456789./",
+                                revealDelay: 0.5
+                            },
+                            ease: "power1.inOut"
+                        });
+                    });
+                </script>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 data-aos="fade-up">Chặng Đường Phát Triển</h2>
+                </div>
+                <div class="col-12">
+                    <div class="timeline">
+                        <div class="timeline-item clearfix" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <h4>2022</h4>
+                                <p>Thành lập ARTNET với showroom đầu tiên tại Hà Nội</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-item clearfix" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <h4>2023</h4>
+                                <p>Mở rộng danh mục sản phẩm và phát triển kênh bán hàng online</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-item clearfix" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <h4>2024</h4>
+                                <p>Ra mắt dòng sản phẩm tranh tráng gương cao cấp</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-item clearfix" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <h4>2025</h4>
+                                <p>Phát triển thị trường toàn quốc với hơn 50 đại lý</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 data-aos="fade-up">Đội Ngũ Lãnh Đạo</h2>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <img src="../assets/img/elon musk.jpg" alt="CEO">
+                        <h4>Nguyễn Văn Musk</h4>
+                        <p class="text-muted">Giám đốc điều hành</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <img src="../assets/img/mark zuckerberg.jpg" alt="Art Director">
+                        <h4>Trần Văn Zuck</h4>
+                        <p class="text-muted">Giám đốc nghệ thuật</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <img src="../assets/img/jeff bezos.jpg" alt="Sales Director">
+                        <h4>Lê Văn Jeff</h4>
+                        <p class="text-muted">Giám đốc kinh doanh</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="certifications">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 data-aos="fade-up">Cam Kết Của Chúng Tôi</h2>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="certification-item">
+                            <i class="fas fa-medal"></i>
+                            <h4>Chất Lượng Hàng Đầu</h4>
+                            <p>Sử dụng vật liệu cao cấp và quy trình sản xuất nghiêm ngặt</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h4>Giao Hàng Toàn Quốc</h4>
+                            <p>Vận chuyển nhanh chóng, an toàn đến mọi miền tổ quốc</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="certification-item">
+                            <i class="fas fa-headset"></i>
+                            <h4>Hỗ Trợ 24/7</h4>
+                            <p>Đội ngũ tư vấn chuyên nghiệp, nhiệt tình</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-logo-section">
+                        <div class="footer-logo">
+                            <img src="../assets/img/logo (1).png" alt="ARTNET Logo" style="height: 60px; width: 60px" />
+                            <h1>ARTNET</h1>
+                        </div>
+                        <p class="footer-description">
+                            Artnet tự hào đã bán ra hơn 16.000 sản phẩm, khẳng định chất lượng và uy tín trên thị trường.<br>
+                            Đội ngũ khách hàng của Artnet đã vượt mốc 10.000 người, minh chứng cho sự yêu mến và ủng hộ từ cộng đồng!
+                        </p>
+                        <div class="footer-members">
+                            <img src="../assets/img/anhnguoi.jpg" alt="">
+                            <img src="../assets/img/anhnguoi2.webp" alt="">
+                            <img src="../assets/img/anhnguoi3.jpg" alt="">
+                            <span><strong>10.000</strong> Khách hàng đã tin tưởng </span>
+                        </div>
+                    </div>
+
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h6>VỀ CHÚNG TÔI</h6>
+                            <ul>
+                                <li><a href="policy.html">Điều Khoản</a></li>
+                                <li><a href="contact.html">Liên Hệ</a></li>
+                                <li><a href="about.html">Giới thiệu</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h6>LIÊN HỆ</h6>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt me-2"></i>12 Chùa Bộc, Đống Đa, Hà Nội</li>
+                                <li><i class="fas fa-phone-alt me-2"></i>0123 456 789</li>
+                                <li><i class="fas fa-phone-alt me-2"></i>0987 654 321</li>
+                                <li><i class="fas fa-envelope me-2"></i>artnetpic@gmail.com</li>
+                                <li><i class="fas fa-envelope me-2"></i>andecor@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h6>TRANH ARTNET</h6>
+                            <ul>
+                                <li><a href="phong_canh.html">Tranh Phong Cảnh</a></li>
+                                <li><a href="tranh_son_dau.html">Tranh Sơn Dầu</a></li>
+                                <li><a href="tranh_chu_de.html">Tranh Chủ Đề</a></li>
+                                <li><a href="tranh_den_led.html">Tranh Đèn Led</a></li>
+                                <li><a href="tranh_dong_ho.html">Tranh Đồng Hồ</a></li>
+                                <li><a href="tranh_canvas.html">Tranh Canvas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© <a href="#">ARTNET</a> 2025, All rights reserved.</p>
+                    <ul>
+                        <li><a href="#">Giao hàng nhanh chóng</a></li>
+                        <li><a href="#">Phản hồi kịp thời</a></li>
+                        <li><a href="#">Uy tín-chất lượng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
