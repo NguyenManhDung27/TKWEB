@@ -21,7 +21,26 @@
         .chart-container {
             position: relative;
             margin: auto;
-            height: 300px !important;
+            height: 300px;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .chart-card {
+                margin-bottom: 20px;
+            }
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chart-container {
+                height: 200px;
+            }
+            .col-md-4 {
+                padding: 0 10px;
+            }
         }
         body {
             font-family: 'Roboto', system-ui, -apple-system, sans-serif;
@@ -274,26 +293,26 @@
                     </div>
                 </div>
 
-                <!-- Chart section -->
-                <div class="row mt-5">
+                <!-- Phần biểu đồ thống kê -->
+                <div class="row mt-5 mx-0">
                     <div class="col-12 text-center mb-4">
                         <h3 style="color: #8b5e3c; font-weight: 700;">Thống Kê Chi Tiết</h3>
                     </div>
-                    <div class="col-md-4 mb-4">
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <div class="chart-card">
                             <div class="card-body">
                                 <canvas id="customerDistribution"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <div class="chart-card">
                             <div class="card-body">
                                 <canvas id="monthlySales"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <div class="chart-card">
                             <div class="card-body">
                                 <canvas id="categoryDistribution"></canvas>
