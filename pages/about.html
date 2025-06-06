@@ -7,6 +7,22 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
+        .chart-card {
+            background: linear-gradient(to bottom right, #fff, #f7f3eb);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(139, 94, 60, 0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .chart-card:hover {
+            transform: translateY(-5px);
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 300px !important;
+        }
         body {
             font-family: 'Roboto', system-ui, -apple-system, sans-serif;
         }
@@ -256,8 +272,39 @@
                         <h3 id="rating">4.9/5</h3>
                         <p>Đánh giá từ khách hàng</p>
                     </div>
-                </div>                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrambleTextPlugin.min.js"></script>
+                </div>
+
+                <!-- Chart section -->
+                <div class="row mt-5">
+                    <div class="col-12 text-center mb-4">
+                        <h3 style="color: #8b5e3c; font-weight: 700;">Thống Kê Chi Tiết</h3>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-card">
+                            <div class="card-body">
+                                <canvas id="customerDistribution"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-card">
+                            <div class="card-body">
+                                <canvas id="monthlySales"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-card">
+                            <div class="card-body">
+                                <canvas id="categoryDistribution"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
                         gsap.to("#products-sold", {
@@ -482,9 +529,134 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/dropdown.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
+        document.addEventListener("DOMContentLoaded", function() {
+            // Khởi tạo GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Xóa hiệu ứng AOS để tránh xung đột
+            const elementsWithAOS = document.querySelectorAll('[data-aos]');
+            elementsWithAOS.forEach(element => {
+                element.removeAttribute('data-aos');
+                element.removeAttribute('data-aos-delay');
+            });
+
+            // Hiệu ứng đếm số liệu thống kê
+            const numbers = {
+                products: 0,
+                customers: 0,
+                dealers: 0,
+                rating: 0
+            };
+
+            gsap.to(numbers, {
+                scrollTrigger: {
+                    trigger: ".stats-card",
+                    start: "top center+=100"
+                },
+                duration: 2,
+                products: 16000,
+                customers: 10000,
+                dealers: 500,
+                rating: 4.9,
+                roundProps: ["products", "customers", "dealers"],
+                onUpdate: () => {
+                    document.getElementById("products-sold").textContent = Math.round(numbers.products) + "+";
+                    document.getElementById("customers").textContent = Math.round(numbers.customers) + "+";
+                    document.getElementById("dealers").textContent = Math.round(numbers.dealers) + "+";
+                    document.getElementById("rating").textContent = numbers.rating.toFixed(1) + "/5";
+                },
+                ease: "power1.out"
+            });
+
+            // Biểu đồ phân bố khách hàng theo vùng miền
+            new Chart(document.getElementById('customerDistribution'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Miền Bắc', 'Miền Trung', 'Miền Nam'],
+                    datasets: [{
+                        data: [4500, 2500, 3000],
+                        backgroundColor: [
+                            'rgba(139, 94, 60, 0.8)',
+                            'rgba(183, 127, 84, 0.8)',
+                            'rgba(210, 180, 140, 0.8)'
+                        ],
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Phân Bố Khách Hàng',
+                            font: { family: 'Roboto', size: 16, weight: 'bold' },
+                            color: '#8b5e3c'
+                        }
+                    }
+                }
+            });
+
+            // Biểu đồ doanh số bán hàng theo tháng
+            new Chart(document.getElementById('monthlySales'), {
+                type: 'bar',
+                data: {
+                    labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'],
+                    datasets: [{
+                        label: 'Doanh số 2024',
+                        data: [800, 1200, 1500, 1300, 1800, 2000, 1900, 2200, 2400, 2600, 2800, 3000],
+                        backgroundColor: 'rgba(139, 94, 60, 0.8)',
+                        borderColor: 'rgba(139, 94, 60, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Doanh Số Theo Tháng',
+                            font: { family: 'Roboto', size: 16, weight: 'bold' },
+                            color: '#8b5e3c'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(139, 94, 60, 0.1)' }
+                        }
+                    }
+                }
+            });
+
+            // Biểu đồ phân bố sản phẩm theo danh mục
+            new Chart(document.getElementById('categoryDistribution'), {
+                type: 'polarArea',
+                data: {
+                    labels: ['Tranh Tráng Gương', 'Tranh Canvas', 'Tranh Đèn LED', 'Tranh Sơn Dầu', 'Tranh Đồng Hồ'],
+                    datasets: [{
+                        data: [4000, 3500, 3000, 3200, 2300],
+                        backgroundColor: [
+                            'rgba(139, 94, 60, 0.8)',
+                            'rgba(183, 127, 84, 0.8)',
+                            'rgba(210, 180, 140, 0.8)',
+                            'rgba(160, 120, 70, 0.8)',
+                            'rgba(190, 150, 110, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Phân Bố Sản Phẩm',
+                            font: { family: 'Roboto', size: 16, weight: 'bold' },
+                            color: '#8b5e3c'
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
