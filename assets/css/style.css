@@ -1047,5 +1047,99 @@ font-style: italic;
 .login-link:hover {
     text-decoration: underline;
 }
+/* ------------------------ RESPONSIVE CHO CÁC THIẾT BỊ ------------------------ */
+
+/* iPhone SE, XR, Pixel 7, iPhone 12 Pro  */
+@media (max-width: 479px) {
+  .header-container,
+  .footer-top {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .search-box {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .decor-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .kpt-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand-card {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/* iPhone 14 Pro Max, Galaxy S20 Ultra (~480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*.brand-container {
+    grid-template-columns: repeat(2, 1fr);
+  }*/
+
+  .decor-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .brand-card {
+    width: 100%;
+  }
+}
+
+/* iPad Mini, iPad Air, Surface Duo (~768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .decor-section {
+    flex-direction: row;
+    padding: 40px;
+  }
+}
+
+/* Từ 1025px trở lên  */
+@media (min-width: 1025px) {
+  .art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+  }
+
+  .brand-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
 
  
