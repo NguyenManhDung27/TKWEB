@@ -19,10 +19,11 @@
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" sizes="180x180">
 </head>
 <body>
-   <div class="wrapper">
     <header>
         <div class="header-container">
+          <a href="../index.html">
             <img src="../assets/img/logo-transparent.png" alt="Logo" style="width: 80px; height: 80px"> 
+          </a>
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
@@ -49,7 +50,7 @@
                         <span class="close">&times;</span>
                     </div>
                     <!-- // modal -->
-   <div class="modal-body">
+            <div class="modal-body">
                         <div class="cart-row">
                             <span class="cart-item cart-header cart-column">Sản Phẩm</span>
                             <span class="cart-price cart-header cart-column">Giá</span>
@@ -82,18 +83,19 @@
                             <strong class="cart-total-title">Tổng Cộng:</strong>
                             <span class="cart-total-price">2500000VNĐ</span>
                         </div>
-                    </div>
+                       </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
-                    </div>
-                </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                          <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                      </div>
+              </div>
+            </div>
             </div>
             </div>
          
-    </header>
-    <section class="menu">
+    </header>  
+<section class="menu">
             <div class="container">
                 <button id="toggle">☰</button>
                 <div id="menu">
@@ -122,39 +124,24 @@
                     </div>
                 </div>
             </div>
-        </section>
-    <div class="wrapper-1">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../assets/img/banner1.png" class="d-block w-100 object-fit-cover" alt="Banner 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="../assets/img/banner4.png" class="d-block w-100 object-fit-cover" alt="Banner 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="../assets/img/banner2.png" class="d-block w-100 object-fit-cover" alt="Banner 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="../assets/img/banner1.png" class="d-block w-100 object-fit-cover" alt="Banner 4">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-            </div>
-        </div>
+        </section> 
+
+   <div class="category-banner">
+  <div class="container">
+  <div class="banner-content">
+    <h1><i class="fa-solid fa-brush"></i> Tranh Canvas tại ARTNET</h1>
+    <p>Chất Liệu Vải Bố Tự Nhiên – Màu Sắc Tươi Sáng
+      Màu in sắc nét trên vải canvas bền bỉ, kết cấu mộc mạc, thích hợp trang trí mọi không gian.</p>
+    <a href="#products" class="banner-btn">Khám phá ngay</a>
+  </div>
+  <div class="banner-image">
+    <img src="../assets/img/clcanvas.jpg" alt="Tranh phong thủy" />
+  </div>
+  </div>
+  </div>
        
-        
-        <section class="py-5 bg-light">
+    <section id="products">
+    <section class="py-5 bg-light">
             <div class="container">
                 <div class="section-title">
                     <span>TRANH CANVAS</span>
@@ -355,6 +342,7 @@
     </div>
 </div>
   
+                    </div>
     </section>
         <!-- HTML cho pop-up -->
         <div id="popupDetail" class="popup-overlay">

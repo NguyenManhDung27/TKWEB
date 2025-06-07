@@ -193,23 +193,7 @@ body {
   background-color: #f3ede8 !important;
   margin: 0;
 }
-.breadcrumb {
-  font-size: 14px;
-  margin: 20px 0;
-  padding: 0px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.breadcrumb a {
-  color: #333;
-  margin-right: 5px;
-  text-decoration: none;
-}
-.breadcrumb span {
-  margin: 0 5px;
-}
 .hero-banner {
   display: flex;
   align-items: center;

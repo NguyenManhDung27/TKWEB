@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/detail.css">
+      <link rel="stylesheet" href="./assets/css/cart.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTNET</title>
@@ -18,36 +19,116 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
 </head>
 <body>
-  <div class ="wrapper">
+  
     <header>
         <div class="header-container">
         <img src = "assets/img/logo-transparent.png" alt ="Logo" style = "width: 100px; height: 100px"> 
         <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
-      </div>
-          <div class="account-cart">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
+       </div>
+        <div class="account-cart">
             <div class="account">
               <i class="fa-regular fa-user"></i>
-              <div>
-                <a href="pages/login.html" class="login-link">>
-                <span>Đăng nhập / Đăng ký</span><br></a>
+              <div id="accountSection">
+                <a href="pages/login.html" id="login-link">Đăng nhập / Đăng ký</a>
+                <span id="usernameDisplay" style="display: none;"></span>
+                <button id="logoutBtn" style="display: none;">Đăng xuất</button>
               </div>
             </div>
-          </div>
-            <div class="cart">
-              <i class="fa-solid fa-basket-shopping"></i>
-              <button>
-              <span class="badge"></span>
-              <strong> Giỏ hàng</strong>
+        </div>
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
             </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <!-- // modal -->
+            <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                            <!-- <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="../assets/img/tuquy6.jpg" width="100" height="100">
+                                <span class="cart-item-title">Tranh tứ quý Mùa xuân</span>
+                            </div>
+                            <span class="cart-price cart-column">1200000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div> -->
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="../assets/img/tuquy1 (2).jpg" width="100" height="100">
+                                <span class="cart-item-title">Tranh tứ quý phong cảnh</span>
+                            </div>
+                            <span class="cart-price cart-column">1300000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">2500000VNĐ</span>
+                        </div>
+                       </div>
+
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                          <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                      </div>
+              </div>
+                </div>
             </div>
-            <div id="lienhe">
-              <i class="fa-solid fa-phone-volume"> + 0243569884</i>
+        </div>
+        
+     
+  </header>
+  </div>
+   <section class="menu">
+      <div class="container">
+        <button id="toggle">☰</button>
+        <div id="menu">
+          <a class="btn active " href="index.html" data-cat="all">Trang Chủ</a>
+    
+          <div class="drop-wrap">
+            <a class="btn" href="#" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
+            <div class="drop">
+              <a href="pages/tranh_bo.html" data-cat="bo-ba">Tranh Bộ Ba</a>
+              <a href="pages/tranh_tu_quy.html" data-cat="tu-quy">Tranh Tứ Quý</a>
+              <a href="pages/tranh_bo_nam.html" data-cat="bo-nam">Tranh Bộ Năm</a>
+              <a href="pages/tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
+            </div>
+          </div>
+    
+              <a class="btn" href="pages/tranh_dong_ho.html" data-cat="dong-ho">Tranh Đồng Hồ</a>
+              <a class="btn" href="pages/tranh_canvas.html" data-cat="canvas">Tranh Canvas</a>
+              <a class="btn" href="pages/tranh_den_led.html" data-cat="den-led">Tranh Đèn LED</a>
+              <a class="btn" href="pages/tranh_son_dau.html" data-cat="son-dau">Tranh Sơn Dầu</a>
+    
+          <div class="drop-wrap">
+            <a class="btn" href="#" data-cat="chu-de">Tranh Theo Chủ Đề ▾</a>
+            <div class="drop">
+              <a href="pages/phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
+              <a href="pages/ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
+              <a  href="pages/thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
+              <a href="pages/son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </section>
   <div class ="wrapper-1">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-inner">
@@ -78,38 +159,8 @@
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
       </div>
     </div>
-    <section class="menu">
-      <div class="container">
-        <button id="toggle">☰</button>
-        <div id="menu">
-          <a class="btn active " href="index.html" data-cat="all">Trang Chủ</a>
+  </div>
     
-          <div class="drop-wrap">
-            <a class="btn" href="pages/tranh_trang_guong.html" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
-            <div class="drop">
-              <a href="pages/tranh_bo.html" data-cat="bo-ba">Tranh Bộ Ba</a>
-              <a href="pages/tranh_tu_quy.html" data-cat="tu-quy">Tranh Tứ Quý</a>
-              <a href="pages/tranh_bo_nam.html" data-cat="bo-nam">Tranh Bộ Năm</a>
-              <a href="pages/tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
-            </div>
-          </div>
-    
-          <a class="btn" href="pages/tranh_dong_ho.html" data-cat="dong-ho">Tranh Đồng Hồ</a>
-          <a class="btn" href="pages/tranh_canvas.html" data-cat="canvas">Tranh Canvas</a>
-          <a class="btn" href="pages/tranh_den_led.html" data-cat="den-led">Tranh Đèn LED</a>
-          <a class="btn" href="pages/tranh_son_dau.html" data-cat="son-dau">Tranh Sơn Dầu</a>
-    
-          <div class="drop-wrap">
-            <a class="btn" href="pages/tranh_chu_de.html" data-cat="chu-de">Tranh Theo Chủ Đề ▾</a>
-            <div class="drop">
-              <a href="pages/phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
-              <a href="pages/ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
-              <a class="btn active" href="pages/thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
-              <a href="pages/son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <section class="weekly-pick">
         <h4>ARTNET</h4>
         <h1>TRANH MỚI NHẤT</h1>
@@ -158,106 +209,106 @@
         </div>
       </section>
    <!--khám phá thương hiệu-->
-<section class="brand-wrapper">
-  <div class="brand-title">
-    <h4>DISCOVER</h4>
-    <h1>KHÁM PHÁ CHỦ ĐỀ</h1>
-  </div>
-<div class="brand-container">
-  <!-- Thương hiệu 1 -->
+              <section class="brand-wrapper">
+                <div class="brand-title">
+                  <h4>DISCOVER</h4>
+                  <h1>KHÁM PHÁ CHỦ ĐỀ</h1>
+                </div>
+              <div class="brand-container">
+                <!-- Thương hiệu 1 -->
 
-  <div class="brand-card" style="background-image: url('./assets/img/tranh-trang-guong-8.jpg')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH BỘ BA</h2>
-      <p>Khám phá những bức tranh đặc sắc với đa dạng mẫu mã từ tranh bộ 3, tranh tứ quý, tranh bộ năm, tranh tròn</p>
-      <a href="./pages/tranh_bo.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-  <!-- Thương hiệu 2 -->
-  <div class="brand-card" style="background-image: url('./assets/img/sonthuy5.webp')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH SƠN THUỶ HỮU TÌNH</h2>
-      <p>Những bức tranh với hình ảnh vừa sống động vừa nên thơ, phù hợp để bày trí không gian căn phòng của bạn</p>
-      <a href="./pages/son_thuy.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-  <!-- Thương hiệu 3 -->
-  <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhbannguyet5.jpeg')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH TRÒN</h2>
-      <p>Những bức tranh tròn, tranh bán nguyệt độc đáo không chỉ giúp căn phòng của bạn thêm sang trọng mà còn tạo cảm giác ấm cúng</p>
-       <a href="./pages/tranh_tron.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
+                <div class="brand-card" style="background-image: url('./assets/img/tranh-trang-guong-8.jpg')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH BỘ BA</h2>
+                    <p>Khám phá những bức tranh đặc sắc với đa dạng mẫu mã từ tranh bộ 3, tranh tứ quý, tranh bộ năm, tranh tròn</p>
+                    <a href="./pages/tranh_bo.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+                <!-- Thương hiệu 2 -->
+                <div class="brand-card" style="background-image: url('./assets/img/sonthuy5.webp')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH SƠN THUỶ HỮU TÌNH</h2>
+                    <p>Những bức tranh với hình ảnh vừa sống động vừa nên thơ, phù hợp để bày trí không gian căn phòng của bạn</p>
+                    <a href="./pages/son_thuy.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+                <!-- Thương hiệu 3 -->
+                <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhbannguyet5.jpeg')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH TRÒN</h2>
+                    <p>Những bức tranh tròn, tranh bán nguyệt độc đáo không chỉ giúp căn phòng của bạn thêm sang trọng mà còn tạo cảm giác ấm cúng</p>
+                    <a href="./pages/tranh_tron.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
 
-  <!-- Thương hiệu 4 -->
-  <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhcanvas2.webp')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH CANVAS</h2>
-      <p>Bộ sưu tập tranh canvas mới nhất từ ARTNET đang chờ bạn khám phá</p>
-       <a href="./pages/tranh_canvas.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
+                <!-- Thương hiệu 4 -->
+                <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhcanvas2.webp')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH CANVAS</h2>
+                    <p>Bộ sưu tập tranh canvas mới nhất từ ARTNET đang chờ bạn khám phá</p>
+                    <a href="./pages/tranh_canvas.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
 
-  <!-- Thương hiệu 55 -->
-  <div class="brand-card" style="background-image: url('./assets/img/dongho11.webp')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH ĐỒNG HỒ</h2>
-      <p>Tranh đồng hồ với phong cách hiện đại & tinh tế đem lại tiện ích cho không gian sống</p>
-      <a href="./pages/tranh_dong_ho.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-  <!-- Thương hiệu 66 -->
-  <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhsondau3.jpg')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH SƠN DẦU</h2>
-      <p>Những bức tranh mang vẻ đẹp mộc mạc gần gũi nhưng cũng không kém phần tinh tế</p>
-      <a href="./pages/tranh_son_dau.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-  <!-- Thương hiệu 7 -->
-  <div class="brand-card" style="background-image: url('./assets/img/tranhdenled2.webp')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH ĐÈN LED</h2>
-      <p>Với hình ảnh 3D sinh động và màu sắc mới mẻ, tranh đèn LED không chỉ là một tác phẩm nghệ thuật mà còn là một vật trang trí hiện đại</p>
-       <a href="./pages/tranh_den_led.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-  <!-- Thương hiệu 8 -->
-  <div class="brand-card" style="background-image: url('./assets/img/pcanh4.jpg')">
-    <div class="brand-overlay"></div>
-    <div class="brand-content">
-      <h2>TRANH PHONG CẢNH</h2>
-      <p>ARTNET đem đến cho bạn những bức tranh với đa dạng chủ đề như tranh phong cảnh, tranh mã đáo thành công, thuận buồm xuôi gió, sơn thuỷ hữu tình</p>
-       <a href="./pages/phong_canh.html">
-      <button>Khám phá</button>
-      </a>
-    </div>
-  </div>
-</div>
-</section>
-  
+                <!-- Thương hiệu 55 -->
+                <div class="brand-card" style="background-image: url('./assets/img/dongho11.webp')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH ĐỒNG HỒ</h2>
+                    <p>Tranh đồng hồ với phong cách hiện đại & tinh tế đem lại tiện ích cho không gian sống</p>
+                    <a href="./pages/tranh_dong_ho.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+                <!-- Thương hiệu 66 -->
+                <div class="brand-card" style="background-image: url('./assets/img/kpt.tranhsondau3.jpg')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH SƠN DẦU</h2>
+                    <p>Những bức tranh mang vẻ đẹp mộc mạc gần gũi nhưng cũng không kém phần tinh tế</p>
+                    <a href="./pages/tranh_son_dau.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+                <!-- Thương hiệu 7 -->
+                <div class="brand-card" style="background-image: url('./assets/img/tranhdenled2.webp')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH ĐÈN LED</h2>
+                    <p>Với hình ảnh 3D sinh động và màu sắc mới mẻ, tranh đèn LED không chỉ là một tác phẩm nghệ thuật mà còn là một vật trang trí hiện đại</p>
+                    <a href="./pages/tranh_den_led.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+                <!-- Thương hiệu 8 -->
+                <div class="brand-card" style="background-image: url('./assets/img/pcanh4.jpg')">
+                  <div class="brand-overlay"></div>
+                  <div class="brand-content">
+                    <h2>TRANH PHONG CẢNH</h2>
+                    <p>ARTNET đem đến cho bạn những bức tranh với đa dạng chủ đề như tranh phong cảnh, tranh mã đáo thành công, thuận buồm xuôi gió, sơn thuỷ hữu tình</p>
+                    <a href="./pages/phong_canh.html">
+                    <button>Khám phá</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              </section>
+                
   <!--BST mới-->
       <section class="comming-soon">
         <h4>Coming soon</h4>
@@ -314,12 +365,12 @@
     </div>
     </div>
 </div>
-  <section class="intro-banner">
-    <div class="overlay">
-      <h2>What is ArtNet</h2>
-      <p>"Chúng tôi không chỉ bán tranh – chúng tôi trao đi cảm xúc, thổi hồn vào từng góc nhỏ trong ngôi nhà của bạn."</p>
-    </div>
-  </section>
+      <section class="intro-banner">
+        <div class="overlay">
+          <h2>What is ArtNet</h2>
+          <p>"Chúng tôi không chỉ bán tranh – chúng tôi trao đi cảm xúc, thổi hồn vào từng góc nhỏ trong ngôi nhà của bạn."</p>
+        </div>
+      </section>
   <section class="footer">
     <div class="footer-container">
       <div class="footer-top">
@@ -370,7 +421,7 @@
               <li><a href="pages/tranh_dong_ho.html">Tranh Đồng Hồ</a></li>
               <li><a href="pages/tranh_canvas.html">Tranh Canvas</a></li>
             </ul>
-            </ul>
+            
           </div>
         </div>
       </div>
@@ -390,6 +441,8 @@
   <script src="assets/js/khamphasp.js"></script>
   <script src="assets/js/dropdown.js"></script>
   <script src="assets/js/detail.js"></script>
+  
+  
     </body>
     </html>
 

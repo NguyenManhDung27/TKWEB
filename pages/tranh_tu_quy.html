@@ -16,15 +16,16 @@
     <title>ARTNET</title>
 </head>
 <body>
-   <div class ="wrapper">
-    <header>
+       <header>
         <div class="header-container">
-        <img src = "../assets/img/logo-transparent.png" alt ="Logo" style = "width: 80px; height: 80px"> 
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-          <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
-      </div>
-          <div class="account-cart">
+             <a href="../index.html">
+            <img src="../assets/img/logo-transparent.png" alt="Logo" style="width: 80px; height: 80px"> 
+          </a>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="cursor: pointer;"></i>
+            </div>
+            <div class="account-cart">
             <div class="account">
               <i class="fa-regular fa-user"></i>
               <div id="accountSection">
@@ -34,7 +35,7 @@
               </div>
             </div>
           </div>
-<!-- The Modal -->
+            <!-- The Modal -->
             <button id="cart">
                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                 Giỏ Hàng
@@ -46,7 +47,7 @@
                         <span class="close">&times;</span>
                     </div>
                     <!-- // modal -->
-   <div class="modal-body">
+            <div class="modal-body">
                         <div class="cart-row">
                             <span class="cart-item cart-header cart-column">Sản Phẩm</span>
                             <span class="cart-price cart-header cart-column">Giá</span>
@@ -79,84 +80,60 @@
                             <strong class="cart-total-title">Tổng Cộng:</strong>
                             <span class="cart-total-price">2500000VNĐ</span>
                         </div>
-                    </div>
+                       </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                          <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                      </div>
+              </div>
+            </div>
+            </div>
+            </div>
+         
+    </header>
+    <section class="menu">
+            <div class="container">
+                <button id="toggle">☰</button>
+                <div id="menu">
+                    <a class="btn" href="../index.html" data-cat="all">Trang Chủ</a>
+                    <div class="drop-wrap">
+                        <a class="btn" href="#" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
+                        <div class="drop">
+                            <a href="tranh_bo.html" data-cat="bo-ba">Tranh Bộ Ba</a>
+                            <a href="tranh_tu_quy.html" data-cat="tu-quy">Tranh Tứ Quý</a>
+                            <a href="tranh_bo_nam.html" data-cat="bo-nam">Tranh Bộ Năm</a>
+                            <a href="tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
+                        </div>
+                    </div>
+                    <a class="btn" href="tranh_dong_ho.html" data-cat="dong-ho">Tranh Đồng Hồ</a>
+                    <a class="btn active" href="tranh_canvas.html" data-cat="canvas">Tranh Canvas</a>
+                    <a class="btn" href="tranh_den_led.html" data-cat="den-led">Tranh Đèn LED</a>
+                    <a class="btn" href="tranh_son_dau.html" data-cat="son-dau">Tranh Sơn Dầu</a>
+                    <div class="drop-wrap">
+                        <a class="btn" href="#" data-cat="chu-de">Tranh Theo Chủ Đề ▾</a>
+                        <div class="drop">
+                            <a href="phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
+                            <a href="ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
+                            <a href="thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
+                            <a href="son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-          </div>
-        </div>
-      </header>
-  <div class ="wrapper-1">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../assets/img/banner1.png" class="d-block w-100 object-fit-cover" alt="Banner 1">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/banner4.png" class="d-block w-100 object-fit-cover" alt="Banner 2">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/banner2.png" class="d-block w-100 object-fit-cover" alt="Banner 3">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/banner1.png" class="d-block w-100 object-fit-cover" alt="Banner 4">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-      </div>
-    </div>
-    <section class="menu">
-      <div class="container">
-        <button id="toggle">☰</button>
-        <div id="menu">
-          <a class="btn" href="../index.html" data-cat="all">Trang Chủ</a>
-          <div class="drop-wrap">
-             <a class="btn active" href="../pages/tranh_trang_guong.html" data-cat="trang-guong">Tranh Tráng Gương ▾</a>
-            <div class="drop">
-              <a href="tranh_bo.html" data-cat="bo-ba">Tranh Bộ Ba</a>
-              <a href="tranh_tu_quy.html" data-cat="tu-quy">Tranh Tứ Quý</a>
-              <a href="tranh_bo_nam.html" data-cat="bo-nam">Tranh Bộ Năm</a>
-              <a href="tranh_tron.html" data-cat="tranh-tron">Tranh Tròn</a>
-          </div>
-          </div>
-          <a class="btn" href="tranh_dong_ho.html" data-cat="dong-ho">Tranh Đồng Hồ</a>
-          <a class="btn" href="tranh_canvas.html" data-cat="canvas">Tranh Canvas</a>
-          <a class="btn" href="tranh_den_led.html" data-cat="den-led">Tranh Đèn LED</a>
-          <a class="btn" href="tranh_son_dau.html" data-cat="son-dau">Tranh Sơn Dầu</a>
-          <div class="drop-wrap">
-            <a class="btn" href="#" data-cat="chu-de">Tranh Theo Chủ Đề ▾</a>
-            <div class="drop">
-              <a href="phong_canh.html" data-cat="phong-canh">Tranh Phong Cảnh</a>
-              <a href="ma_dao_thanh_cong.html" data-cat="ma-dao-thanh-cong">Tranh Mã Đáo Thành Công</a>
-              <a href="thuan_buom.html" data-cat="thuan-buom-xuoi-gio">Tranh Thuận Buồm Xuôi Gió</a>
-              <a href="son_thuy.html" data-cat="son-thuy-huu-tinh">Tranh Sơn Thuỷ Hữu Tình</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  <nav class="breadcrumb">
-    <a href="../index.html">Trang chủ</a>
-    <span>></span>
-    <a href="../pages/tranh_trang_guong.html">Tranh Tráng Gương</a>
-    <span>></span>
-    <a href="#">Tranh Tứ Quý</a>
-  </nav>
+        </section>
+   <div class="category-banner">
+  <div class="banner-content">
+    <h1><i class="fa-solid fa-brush"></i> Tranh Tráng Gương TỨ QUÝ tại ARTNET</h1>
+    <p>Tứ Quý Tráng Gương – Vẻ Đẹp Truyền Thống Đẳng Cấp
+      Mỗi bức tranh tỏa sáng dưới lớp kính bảo vệ, mang ý nghĩa phong thủy và nghệ thuật bền lâu.</p>
+    <a href="#products" class="banner-btn">Khám phá ngay</a>
+  </div>
+  <div class="banner-image">
+    <img src="../assets/img/clbo4.png" alt="Tranh phong thủy" />
+  </div>
+  </div>
+<section id="products">
 <section class="py-5 bg-light">
     <div class="container">
   <div class="section-title">
@@ -164,7 +141,7 @@
   <div class="line"></div>
 </div>
 <!--Chi tiết-->
-<section class="products">
+<section id="products">
   <div class="row g-4">
      <!-- tranh 1  -->
   <div class="col-6 col-md-3 d-flex flex-column align-items-start mb-4">
@@ -363,14 +340,10 @@
   </div>
   </div>
 </div>
-</section>
-
-
 </div>
 
 </section>
-
-
+</section>
 <!-- HTML cho pop-up -->
         <div id="popupDetail" class="popup-overlay">
             <div class="popup-content">

@@ -115,3 +115,9 @@ popup.addEventListener('click', e => {
     if (e.target === popup) closePopup();
 });
 
+/*   NÚT KHÁM PHÁ NGAY CHO TRANG DANH MỤC */
+document.querySelector('.scroll-to').onclick = e => {
+  e.preventDefault();
+  const targetY = document.getElementById('products').offsetTop;
+  window.scrollTo({ top: targetY, behavior: 'smooth' });
+};
