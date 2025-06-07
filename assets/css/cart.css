@@ -11,7 +11,7 @@ li {
 
 
 /* modal */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -37,6 +37,26 @@ li {
   outline: 0;
   max-height: 90vh;
   overflow: hidden;
+} */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed; /* Ở vị trí cố định */
+    z-index: 1; /* Đặt trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%; /* Toàn bộ chiều rộng */
+    height: 100%; /* Toàn bộ chiều cao */
+    overflow: auto; /* Bỏ qua cuộn */
+    background-color: rgb(0,0,0); /* Màu nền */
+    background-color: rgba(0,0,0,0.4); /* Màu nền với độ trong suốt */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% từ trên và tự động căn giữa */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Chiều rộng */
 }
 
 .modal-header {

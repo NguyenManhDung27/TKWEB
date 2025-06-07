@@ -277,7 +277,6 @@
         <form id="loginForm" class="form active">
             <div class="form-header">
                 <h2>Đăng nhập</h2>
-                <!-- <p>Đăng nhập để trải nghiệm dịch vụ của chúng tôi</p> -->
             </div>
             <div class="input-group">
                 <label for="loginUsername">Tên đăng nhập</label>
@@ -300,7 +299,6 @@
         <form id="registerForm" class="form">
             <div class="form-header">
                 <h2>Đăng ký</h2>
-                <!-- <p>Tạo tài khoản mới để truy cập nhiều tính năng hơn</p> -->
             </div>
             <div class="input-group">
                 <label for="regEmail">Email</label>
@@ -333,124 +331,14 @@
                 Đã có tài khoản? <a href="#" data-switch="login">Đăng nhập</a>
             </div>
         </form>
+
+        <div id="accountSection" style="display: none; text-align: center; margin-top: 20px;">
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn" style="display: none;">Đăng xuất</button>
+        </div>
     </div>
 
-    <script>
-        // Xử lý chuyển đổi tab
-        const tabs = document.querySelectorAll('.tab');
-        const forms = document.querySelectorAll('.form');
-        const switchLinks = document.querySelectorAll('[data-switch]');
-
-        function switchTab(tabName) {
-            tabs.forEach(tab => {
-                tab.classList.toggle('active', tab.dataset.tab === tabName);
-            });
-            forms.forEach(form => {
-                form.classList.toggle('active', form.id === `${tabName}Form`);
-            });
-        }
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => switchTab(tab.dataset.tab));
-        });
-
-        switchLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchTab(link.dataset.switch);
-            });
-        });
-
-        // Xử lý đăng nhập
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
-            const messageEl = document.getElementById('loginMessage');
-
-            if (!username || !password) {
-                messageEl.textContent = 'Vui lòng điền đầy đủ thông tin!';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            const user = users.find(u => u.username === username && u.password === password);
-
-            if (user) {
-                messageEl.textContent = 'Đăng nhập thành công! Đang chuyển hướng...';
-                messageEl.className = 'message success';
-                localStorage.setItem('currentUser', JSON.stringify(user));
-                
-                setTimeout(() => {
-                    window.location.href = '../index.html';
-                }, 1500);
-            } else {
-                messageEl.textContent = 'Tài khoản hoặc mật khẩu không chính xác';
-                messageEl.className = 'message error';
-            }
-        });
-
-        // Xử lý đăng ký
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('regEmail').value;
-            const fullname = document.getElementById('regFullname').value;
-            const username = document.getElementById('regUsername').value;
-            const password = document.getElementById('regPassword').value;
-            const messageEl = document.getElementById('regMessage');
-
-            // Validate email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                messageEl.textContent = 'Email không hợp lệ';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            // Validate password
-            if (password.length < 8) {
-                messageEl.textContent = 'Mật khẩu phải có ít nhất 8 ký tự';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            if (!/[A-Z]/.test(password)) {
-                messageEl.textContent = 'Mật khẩu phải có ít nhất 1 chữ cái in hoa';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            if (!/[a-z]/.test(password)) {
-                messageEl.textContent = 'Mật khẩu phải có ít nhất 1 chữ cái in thường';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            if (!/[0-9]/.test(password)) {
-                messageEl.textContent = 'Mật khẩu phải có ít nhất 1 chữ số';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            if (users.some(u => u.username === username)) {
-                messageEl.textContent = 'Tên đăng nhập đã tồn tại';
-                messageEl.className = 'message error';
-                return;
-            }
-
-            users.push({ email, fullname, username, password });
-            localStorage.setItem('users', JSON.stringify(users));
-
-            messageEl.textContent = 'Đăng ký thành công! Vui lòng đăng nhập.';
-            messageEl.className = 'message success';
-
-            this.reset();
-            setTimeout(() => {
-                switchTab('login');
-            }, 1500);
-        });
+    <script src="../assets/js/login.js">
     </script>
 </body>
 </html>
