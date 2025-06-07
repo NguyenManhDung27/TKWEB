@@ -1250,3 +1250,67 @@ font-style: italic;
 html {
   scroll-behavior: smooth;
 }
+.buy-now {
+  border:#563826
+}
+.kham-pha {
+  padding: 60px 40px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+background-color: #f7f3eb;
+  }
+  .kham-pha h1 {
+      font-size: 36px;  
+      font-weight: bold;
+      margin-bottom: 32px;
+      color: #000;
+    }
+    
+    .kham-pha h4 {
+         font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+  
+  #photo-gallery .col-6.active {
+    background-color: #f7f3eb;
+    color:#5a3e2b
+  }
+    /* Ẩn tất cả tranh ban đầu */
+     #photo-gallery .col-6 {
+      display: none !important; /* Đảm bảo không bị ghi đè */
+    }
+
+    /* Hiển thị tranh của trang hiện tại */
+    #photo-gallery .col-6.active {
+      display: flex !important;
+    }
+  
+
+    /* Định dạng phân trang */
+    #pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #pagination button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #pagination button:hover:not(:disabled) {
+      background-color: #007bff;
+      color: white;
+    }
+
+    #pagination button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
