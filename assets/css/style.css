@@ -27,11 +27,6 @@ body {
       border-radius: 50%;   
     }
     
-
-
-
-
-    
   /* Search box */
   .search-box {
     flex: 1;
@@ -243,11 +238,6 @@ body {
   background-color: #f7f2ec;
 }
 
-.pagination .page-link:hover,
-.pagination .page-item.active .page-link {
-  background-color: #d5bfa3;
-  color: white;
-}
 /* Popup Overlay */
 .popup-overlay {
   position: fixed;
@@ -1306,7 +1296,7 @@ background-color: #f7f3eb;
     }
 
     #pagination button:hover:not(:disabled) {
-      background-color: #007bff;
+      background-color: #c9b79b;
       color: white;
     }
 
