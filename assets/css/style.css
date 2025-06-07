@@ -3,8 +3,8 @@ body {
   text-decoration: none;
   list-style: none;
   padding: 0;
-  background-color: #dfc3ae !important;
   margin: 0;
+  background-color: #5a3e2b;
 }
 
   header {
@@ -59,6 +59,9 @@ body {
   
     
   /* Account + Cart */
+ #login-link {
+    color: #f7f2ec;
+  }
   .account-cart {
     display: flex;
     align-items: center;
@@ -533,11 +536,7 @@ color: #5b3a1a; /* ví dụ: màu nâu */
   color: #f7f3eb;
 }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+
 
 .footer-column li {
   margin-bottom: 10px;
@@ -572,6 +571,7 @@ color: #5b3a1a; /* ví dụ: màu nâu */
   list-style: none;
   margin: 0;
   padding: 0;
+  color: #dfc3ae;
 }
 
 .footer-bottom a:hover {
