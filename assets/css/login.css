@@ -34,7 +34,6 @@ body {
 
 }
 .container {
-    z-index:10;
     position: relative;
     top: 50%;
     margin: -160px auto 0;
@@ -159,7 +158,6 @@ margin: 20px;
     opacity: 0;
 }
 #accountSection {
-  z-index:10;
   display: flex;
   align-items: center;
   gap: 10px;

@@ -265,3 +265,36 @@ function addProductToCart(product) {
         selectedProduct.classList.remove('selected-product');
     }
 }
+// Sự kiện thay đổi số lượng
+const quantityInputs = document.querySelectorAll('.cart-quantity-input');
+quantityInputs.forEach(input => {
+    input.addEventListener('change', e => {
+        const cartRow = input.closest('.cart-row');
+        const price = cartRow.querySelector('.cart-price').textContent.trim();
+        const quantity = parseInt(input.value);
+        const totalPrice = cartRow.querySelector('.cart-total-price');
+
+        // Cập nhật tổng tiền
+        const priceNumber = parseInt(price.replace(/[^\d]/g, '')) || 0;
+        const itemTotal = priceNumber * quantity;
+        totalPrice.textContent = itemTotal.toLocaleString('vi-VN') + 'đ';
+
+        // Cập nhật tổng tiền giỏ hàng
+        updateTotalPrice();
+    });
+});
+
+// Hàm cập nhật tổng tiền giỏ hàng
+function updateTotalPrice() {
+    const cartRows = document.querySelectorAll('.cart-row');
+    let total = 0;
+
+    cartRows.forEach(cartRow => {
+        const totalPrice = cartRow.querySelector('.cart-total-price');
+        const priceNumber = parseInt(totalPrice.textContent.replace(/[^\d]/g, '')) || 0;
+        total += priceNumber;
+    });
+
+    const cartTotalPriceEl = document.querySelector('.cart-total-price');
+    cartTotalPriceEl.textContent = total.toLocaleString('vi-VN') + 'đ';
+}
