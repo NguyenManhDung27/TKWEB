@@ -37,59 +37,74 @@
                 </div>
             </div>
         </div>
-            <!-- The Modal -->
-            <button id="cart">
-                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                Giỏ Hàng
-            </button>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Giỏ Hàng</h5>
-                        <span class="close">&times;</span>
-                    </div>
-                    <!-- // modal -->
-            <div class="modal-body">
-                        <div class="cart-row">
-                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-                            <span class="cart-price cart-header cart-column">Giá</span>
-                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-                        </div>
-                        <div class="cart-items">
-                            <!-- <div class="cart-row">
-                            <div class="cart-item cart-column">
-                                <img class="cart-item-image" src="../assets/img/tuquy6.jpg" width="100" height="100">
-                                <span class="cart-item-title">Tranh tứ quý Mùa xuân</span>
-                            </div>
-                            <span class="cart-price cart-column">1200000đ</span>
-                            <div class="cart-quantity cart-column">
-                                <input class="cart-quantity-input" type="number" value="1">
-                                <button class="btn btn-danger" type="button">Xóa</button>
-                            </div>
-                        </div> -->
-                        <div class="cart-row">
-                            <div class="cart-item cart-column">
-                                <img class="cart-item-image" src="../assets/img/tuquy1 (2).jpg" width="100" height="100">
-                                <span class="cart-item-title">Tranh tứ quý phong cảnh</span>
-                            </div>
-                            <span class="cart-price cart-column">1300000đ</span>
-                            <div class="cart-quantity cart-column">
-                                <input class="cart-quantity-input" type="number" value="2">
-                                <button class="btn btn-danger" type="button">Xóa</button>
-                            </div>
-                        </div>
-                        <div class="cart-total">
-                            <strong class="cart-total-title">Tổng Cộng:</strong>
-                            <span class="cart-total-price">2500000VNĐ</span>
-                        </div>
-                       </div>
+<!-- Nút Giỏ Hàng -->
+<button id="cart" style="position: relative; cursor: pointer;">
+    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+    Giỏ Hàng
+    <span class="badge" style="
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        background-color: #ef4444; /* Màu đỏ nhẹ */
+        color: white;
+        border-radius: 9999px;
+        padding: 2px 8px;
+        font-size: 12px;
+        font-weight: 700;
+        min-width: 20px;
+        text-align: center;
+        display: none; /* Mặc định ẩn */
+    ">0</span>
+</button>
 
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-                          <button type="button" class="btn btn-primary order">Thanh Toán</button>
-                      </div>
-              </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Giỏ Hàng</h5>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                <span class="cart-price cart-header cart-column">Giá</span>
+                <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+            </div>
+            <div class="cart-items">
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="../assets/img/tuquy6.jpg" width="100" height="100">
+                        <span class="cart-item-title">Tranh tứ quý Mùa xuân</span>
+                    </div>
+                    <span class="cart-price cart-column">1200000đ</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">Xóa</button>
+                    </div>
                 </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="../assets/img/tuquy1 (2).jpg" width="100" height="100">
+                        <span class="cart-item-title">Tranh tứ quý phong cảnh</span>
+                    </div>
+                    <span class="cart-price cart-column">1300000đ</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="2">
+                        <button class="btn btn-danger" type="button">Xóa</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Tổng Cộng:</strong>
+                <span class="cart-total-price">2500000VNĐ</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+            <button type="button" class="btn btn-primary order">Thanh Toán</button>
+        </div>
+    </div>
+</div>
             </div>
         </div>
         
@@ -1219,6 +1234,8 @@ Sản phẩm mang lại sự tinh tế và ấn tượng cho ngôi nhà của b�
   <script src="assets/js/dropdown.js"></script>
   <script src="assets/js/detail.js"></script>
   <script src="assets/js/popup.js"></script>
+  <!-- <script src="assets/js/cart.js"></script> -->
+   <script src="assets/js/auth-ui.js"></script>
   <script src="assets/js/login.js"></script>
 
   <script>
@@ -1287,8 +1304,255 @@ Sản phẩm mang lại sự tinh tế và ấn tượng cho ngôi nhà của b�
      console.error("Không tìm thấy phần tử tranh nào trong #photo-gallery");
    }
  });
+// GIỎ HÀNG
+// cart.js
 
- 
+// Lấy phần tử modal và các nút
+const modal = document.getElementById('myModal');
+const cartBtn = document.getElementById('cart');
+const closeBtn = modal.querySelector('.close');
+const closeFooterBtn = modal.querySelector('.close-footer');
+const orderBtn = modal.querySelector('.order');
+const cartItemsContainer = modal.querySelector('.cart-items');
+const cartTotalPriceEl = modal.querySelector('.cart-total-price');
+
+// Hàm lấy giỏ hàng từ localStorage
+function getCart() {
+  const cart = localStorage.getItem('cartProducts');
+  return cart ? JSON.parse(cart) : [];
+}
+
+// Hàm lưu giỏ hàng vào localStorage
+function saveCart(cart) {
+  localStorage.setItem('cartProducts', JSON.stringify(cart));
+}
+
+// Cập nhật tổng tiền và hiển thị giỏ hàng
+function displayCartItems() {
+  cartItemsContainer.innerHTML = '';
+  const cartItems = getCart();
+
+  if (cartItems.length === 0) {
+    cartItemsContainer.innerHTML = '<p class="text-center p-4 text-gray-500">Giỏ hàng của bạn đang trống</p>';
+    cartTotalPriceEl.textContent = '0đ';
+    return;
+  }
+
+  let total = 0;
+  
+  cartItems.forEach(product => {
+    const priceNumber = parseInt(product.price.replace(/[^\d]/g, '')) || 0;
+    const itemTotal = priceNumber * product.quantity;
+    total += itemTotal;
+
+    const cartRow = document.createElement('div');
+    cartRow.className = 'cart-row';
+    cartRow.innerHTML = `
+      <div class="cart-item cart-column flex items-center gap-4 p-3 rounded border bg-white shadow-sm">
+        <img class="cart-item-image rounded" src="${product.img}" alt="${product.title}" width="100" height="100"/>
+        <span class="cart-item-title font-semibold text-gray-900">${product.title}</span>
+      </div>
+      <span class="cart-price cart-column font-semibold text-gray-900">${product.price}</span>
+      <div class="cart-quantity cart-column flex items-center gap-2">
+        <input class="cart-quantity-input border rounded text-center text-gray-800" type="number" min="1" value="${product.quantity}" style="width:60px"/>
+        <button class="btn btn-danger bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">Xóa</button>
+      </div>
+    `;
+
+    cartItemsContainer.appendChild(cartRow);
+
+    // Sự kiện thay đổi số lượng
+    const quantityInput = cartRow.querySelector('.cart-quantity-input');
+    quantityInput.addEventListener('change', e => {
+      let val = parseInt(e.target.value);
+      if (isNaN(val) || val < 1) val = 1;
+      e.target.value = val;
+      updateQuantity(product.title, val);
+    });
+
+    // Sự kiện xóa sản phẩm
+    const removeBtn = cartRow.querySelector('.btn-danger');
+    removeBtn.addEventListener('click', () => {
+      removeItem(product.title);
+    });
+  });
+
+  cartTotalPriceEl.textContent = total.toLocaleString('vi-VN') + 'đ';
+}
+
+// Cập nhật số lượng 1 sản phẩm trong giỏ hàng
+function updateQuantity(title, quantity) {
+  let cart = getCart();
+  let product = cart.find(item => item.title === title);
+  if (product) {
+    product.quantity = quantity;
+    saveCart(cart);
+    displayCartItems();
+  }
+}
+
+// Xóa 1 sản phẩm khỏi giỏ hàng
+function removeItem(title) {
+  let cart = getCart();
+  cart = cart.filter(item => item.title !== title);
+  saveCart(cart);
+  displayCartItems();
+}
+
+// Mở Modal giỏ hàng khi bấm nút giỏ
+cartBtn.addEventListener('click', () => {
+  displayCartItems();
+  modal.style.display = 'block';
+});
+
+// Đóng Modal khi bấm nút đóng hoặc background
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+closeFooterBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+window.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// Xử lý nút thanh toán chuyển sang checkout
+orderBtn.addEventListener('click', () => {
+  window.location.href = 'pages/checkout.html';
+});
+
+// Thêm sản phẩm vào giỏ hàng từ popup hoặc danh sách
+function addProductToCart(product) {
+  const cart = getCart();
+  const existing = cart.find(item => item.title === product.title);
+
+  if (existing) {
+    existing.quantity += product.quantity;
+  } else {
+    cart.push(product);
+  }
+  saveCart(cart);
+  displayCartItems();
+}
+
+// Bắt sự kiện cho các nút 'Thêm vào giỏ hàng' trong danh sách sản phẩm
+document.querySelectorAll('.btn-add-cart').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const card = e.target.closest('.col-6, .col-md-3');
+    const title = card.querySelector('.fw-semibold').innerText.trim();
+    const price = card.querySelector('.fw-bold.text-danger').innerText.trim();
+    const img = card.querySelector('img.card-img-top').src;
+
+    addProductToCart({ title, price, img, quantity: 1 });
+
+    // Mở modal giỏ hàng khi mới thêm sản phẩm
+    displayCartItems();
+    modal.style.display = 'block';
+  });
+});
+
+// Bắt sự kiện thêm sản phẩm từ pop-up
+document.querySelectorAll('.add-to-cart-popup').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const title = document.getElementById('popupTitle').textContent.trim();
+    const price = document.getElementById('totalPrice').textContent.trim();
+    const img = document.getElementById('popupImg').src;
+    let quantity = parseInt(document.getElementById('quantityInput').value, 10);
+    if (isNaN(quantity) || quantity < 1) quantity = 1;
+
+    addProductToCart({ title, price, img, quantity });
+    modal.style.display = 'none'; // đóng modal pop-up
+  });
+});
+
+// Tự động hiển thị giỏ hàng khi load trang (nếu muốn có thể bỏ)
+window.addEventListener('DOMContentLoaded', () => {
+  displayCartItems();
+});
+// Bắt sự kiện cho nút 'Mua Ngay' trong pop-up
+document.querySelectorAll('.buy-now-popup').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const title = document.getElementById('popupTitle').textContent.trim();
+    const price = document.getElementById('totalPrice').textContent.trim();
+    const img = document.getElementById('popupImg').src;
+    let quantity = parseInt(document.getElementById('quantityInput').value, 10);
+    if (isNaN(quantity) || quantity < 1) quantity = 1;
+
+    // Thêm sản phẩm vào giỏ hàng
+    addProductToCart({ title, price, img, quantity });
+
+    // Chuyển hướng đến trang thanh toán
+    window.location.href = 'pages/checkout.html';
+  });
+});
+// Cập nhật badge số lượng sản phẩm trên nút giỏ hàng
+function updateCartBadge() {
+  const cartItems = getCart(); // lấy giỏ hàng từ localStorage
+  const totalQuantity = cartItems.reduce((sum, item) => sum + Number(item.quantity), 0);
+  const cartButton = document.getElementById('cart');
+
+  if (!cartButton) return;
+
+  let badge = cartButton.querySelector('.badge');
+
+  // Nếu badge chưa tồn tại thì tạo
+  if (!badge) {
+    badge = document.createElement('span');
+    badge.classList.add('badge');
+    cartButton.appendChild(badge);
+  }
+
+  if (totalQuantity > 0) {
+    badge.textContent = totalQuantity;
+    badge.style.display = 'inline-block';
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+// Gọi updateCartBadge mỗi khi giỏ hàng thay đổi
+function addProductToCart(product) {
+  const cart = getCart();
+  const existingProduct = cart.find(item => item.title === product.title);
+
+  if (existingProduct) {
+    existingProduct.quantity = Number(existingProduct.quantity) + Number(product.quantity);
+  } else {
+    cart.push(product);
+  }
+  saveCart(cart);
+  displayCartItems();
+  updateCartBadge(); // Cập nhật số lượng trên badge sau khi thêm
+}
+
+// Các hàm khác gọi updateCartBadge khi cập nhật giỏ hàng như:
+function updateQuantity(title, quantity) {
+  const cartItems = getCart();
+  const product = cartItems.find(item => item.title === title);
+  if (product) {
+    product.quantity = quantity;
+    saveCart(cartItems);
+    displayCartItems();
+    updateCartBadge();
+  }
+}
+
+function removeItem(title) {
+  let cartItems = getCart();
+  cartItems = cartItems.filter(item => item.title !== title);
+  saveCart(cartItems);
+  displayCartItems();
+  updateCartBadge();
+}
+
+// Khi load trang, cập nhật biểu tượng và hiển thị giỏ hàng
+window.addEventListener('DOMContentLoaded', () => {
+  displayCartItems();
+  updateCartBadge();
+});
+
    </script>
   
     </body>

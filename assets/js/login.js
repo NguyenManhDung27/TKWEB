@@ -62,13 +62,14 @@ loginForm.addEventListener("submit", function (e) {
     }
 
     showMessage(loginMessage, "Đăng nhập thành công! Đang chuyển hướng...", true);
-    localStorage.setItem("currentUser ", JSON.stringify(user));
+    localStorage.setItem("currentUser", JSON.stringify(user)); // Lưu thông tin người dùng
 
     // Cập nhật giao diện header
     updateHeaderUI(user);
 
+    // Chuyển hướng đến trang chính sau 1.5 giây
     setTimeout(() => {
-        window.location.href = "../index.html";
+        window.location.href = "../index.html"; // Đảm bảo đường dẫn đúng
     }, 1500);
 });
 
@@ -125,19 +126,21 @@ registerForm.addEventListener("submit", function (e) {
 
 // Cập nhật giao diện header
 function updateHeaderUI(user) {
-    const usernameDisplay = document.getElementById("usernameDisplay");
-    const logoutBtn = document.getElementById("logoutBtn");
-    const loginLink = document.getElementById("login-link");
-
-    loginLink.style.display = "none"; // Ẩn link đăng nhập
-    usernameDisplay.textContent = user.fullname || user.username || "User "; // Hiển thị tên người dùng
-    usernameDisplay.style.display = "inline"; // Hiển thị tên người dùng
-    logoutBtn.style.display = "inline-block"; // Hiển thị nút đăng xuất
+    if (usernameDisplay) {
+        usernameDisplay.textContent = user.fullname || user.username || "User  "; // Hiển thị tên người dùng
+        usernameDisplay.style.display = "inline"; // Hiển thị tên người dùng
+    }
+    if (logoutBtn) {
+        logoutBtn.style.display = "inline-block"; // Hiển thị nút đăng xuất
+    }
+    if (loginLink) {
+        loginLink.style.display = "none"; // Ẩn link đăng nhập
+    }
 }
 
 // Hiển thị tên người dùng và nút đăng xuất nếu đã đăng nhập
 window.addEventListener("DOMContentLoaded", () => {
-    const userStr = localStorage.getItem("currentUser ");
+    const userStr = localStorage.getItem("currentUser");
     const user = userStr ? JSON.parse(userStr) : null;
 
     if (user) {
@@ -156,6 +159,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Xử lý đăng xuất
 logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("currentUser ");
+    localStorage.removeItem("currentUser");
     window.location.reload(); // Tải lại trang để cập nhật giao diện
 });
