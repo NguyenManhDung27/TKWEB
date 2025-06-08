@@ -138,27 +138,3 @@ function updateHeaderUI(user) {
     }
 }
 
-// Hiển thị tên người dùng và nút đăng xuất nếu đã đăng nhập
-window.addEventListener("DOMContentLoaded", () => {
-    const userStr = localStorage.getItem("currentUser");
-    const user = userStr ? JSON.parse(userStr) : null;
-
-    if (user) {
-        updateHeaderUI(user); // Cập nhật giao diện nếu đã đăng nhập
-    } else {
-        // Nếu chưa đăng nhập, hiển thị giao diện mặc định
-        const loginLink = document.getElementById("login-link");
-        const usernameDisplay = document.getElementById("usernameDisplay");
-        const logoutBtn = document.getElementById("logoutBtn");
-
-        loginLink.style.display = "inline"; // Hiển thị link đăng nhập
-        usernameDisplay.style.display = "none"; // Ẩn tên người dùng
-        logoutBtn.style.display = "none"; // Ẩn nút đăng xuất
-    }
-});
-
-// Xử lý đăng xuất
-logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("currentUser");
-    window.location.reload(); // Tải lại trang để cập nhật giao diện
-});
