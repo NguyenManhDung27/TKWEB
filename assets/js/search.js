@@ -1,4 +1,4 @@
-// Get all products from the page
+// Lấy tất cả sản phảm ở trang
 function getAllProducts() {
     const products = [];
     const productElements = document.querySelectorAll('.col-6.col-md-3');
@@ -18,7 +18,7 @@ function getAllProducts() {
     return products;
 }
 
-// Create dropdown for search results
+// Tạo dropdown
 function createSearchDropdown() {
     const searchBox = document.querySelector('.search-box');
     const dropdown = document.createElement('div');
@@ -40,7 +40,7 @@ function createSearchDropdown() {
     return dropdown;
 }
 
-// Create result item
+// Tạo kết quả
 function createResultItem(product) {
     return `
         <div class="search-result-item" style="
@@ -64,14 +64,14 @@ function createResultItem(product) {
     `;
 }
 
-// Initialize search functionality
+// Tạo chức năng search
 function initializeSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchIcon = document.getElementById('searchIcon');
     const products = getAllProducts();
     const dropdown = createSearchDropdown();
 
-    // Search function
+    
     function performSearch(query) {
         query = query.toLowerCase();
         const results = products.filter(product => 
@@ -88,7 +88,7 @@ function initializeSearch() {
         }
     }
 
-    // Event listeners
+    
     searchInput.addEventListener('input', (e) => {
         performSearch(e.target.value);
     });
@@ -103,23 +103,23 @@ function initializeSearch() {
         performSearch(searchInput.value);
     });
 
-    // Close dropdown when clicking outside
+    // Tắt dropdown khi click ra ngoài
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.search-box')) {
             dropdown.style.display = 'none';
         }
     });
 
-    // Handle result item click
+    // Mấy chức năng linh tinh trong dropdown kết quả
     dropdown.addEventListener('click', (e) => {
         const resultItem = e.target.closest('.search-result-item');
         if (resultItem) {
             const title = resultItem.querySelector('div > div').textContent;
             const product = products.find(p => p.title === title);
             if (product) {
-                // Scroll to the product
+                
                 product.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                // Highlight the product briefly
+                
                 product.element.style.transition = 'background-color 0.3s';
                 product.element.style.backgroundColor = '#fff9c4';
                 setTimeout(() => {
@@ -127,10 +127,10 @@ function initializeSearch() {
                 }, 1500);
             }
             dropdown.style.display = 'none';
-            searchInput.value = ''; // Clear the search input
+            searchInput.value = ''; // Xóa input ở search
         }
     });
 }
 
-// Initialize when DOM is loaded
+// load chức năng khi DOM khởi động
 document.addEventListener('DOMContentLoaded', initializeSearch);
