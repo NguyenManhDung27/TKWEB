@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link rel="stylesheet" href="../assets/css/checkout.css">
 </head>
 <body>
@@ -13,15 +13,15 @@
     <div class="checkoutLayout">
 
         <div class="returnCart">
-            <a href="/">Keep Shopping</a>
-            <h1>List Product in Cart</h1>
+            <a href="../index.html">Quay về trang chủ</a>
+            <h1>Danh sách sản phẩm</h1>
             <div class="list">
                 <!-- Danh sách sản phẩm sẽ được thêm vào đây -->
             </div>
         </div>
 
         <div class="right">
-            <h1>Checkout</h1>
+            <h1>Đơn hàng</h1>
 
             <div class="form">
                 <div class="group">
@@ -42,7 +42,7 @@
                 <div class="group">
     <label for="country">Quốc gia</label>
     <select name="country" id="country" required>
-        <option value="">Choose...</option>
+        <option value="">Chọn...</option>
         <option value="Vietnam">Việt Nam</option>
         <option value="Kingdom">Kingdom</option>
     </select>
@@ -51,7 +51,7 @@
 <div class="group" id="city-group" style="display: none;">
     <label for="city">Tỉnh / Thành phố</label>
     <select name="city" id="city" required>
-        <option value="">Choose...</option>
+        <option value="">Chọn...</option>
     </select>
 </div>
             </div>
@@ -76,10 +76,16 @@
     const cityGroup = document.getElementById("city-group");
 
     const vietnamCities = [
-        "Hà Nội", "Hồ Chí Minh", "Đà Nẵng", "Cần Thơ", "Hải Phòng", "Bình Dương",
-        "Đồng Nai", "Khánh Hòa", "Lâm Đồng", "Bà Rịa - Vũng Tàu", "Thừa Thiên Huế",
-        "Quảng Ninh", "Nghệ An", "Thanh Hóa", "Nam Định", "Vĩnh Phúc", "Hưng Yên",
-        "Hà Nam", "Thái Bình", "Phú Thọ"
+          "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
+  "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau",
+  "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai",
+  "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương",
+  "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang",
+  "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
+  "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
+  "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La",
+  "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang",
+  "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
     ];
 
     countrySelect.addEventListener("change", function () {

@@ -11,7 +11,7 @@ li {
 
 
 /* modal */
-/* .modal {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -30,33 +30,13 @@ li {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #b79d8c;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: .3rem;
   outline: 0;
   max-height: 90vh;
   overflow: hidden;
-} */
-.modal {
-    display: none; /* Ẩn modal theo mặc định */
-    position: fixed; /* Ở vị trí cố định */
-    z-index: 1; /* Đặt trên cùng */
-    left: 0;
-    top: 0;
-    width: 100%; /* Toàn bộ chiều rộng */
-    height: 100%; /* Toàn bộ chiều cao */
-    overflow: auto; /* Bỏ qua cuộn */
-    background-color: rgb(0,0,0); /* Màu nền */
-    background-color: rgba(0,0,0,0.4); /* Màu nền với độ trong suốt */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% từ trên và tự động căn giữa */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Chiều rộng */
 }
 
 .modal-header {
@@ -90,7 +70,7 @@ h5.modal-title {
   flex: 1;
   overflow-y: auto;
   padding: 16px;
-  background-color: white;
+  background-color: #f9f4f1;
   color: black;
 }
 
@@ -100,7 +80,7 @@ h5.modal-title {
   justify-content: flex-end;
   gap: 10px;
   padding: 16px;
-  background-color: #f8f8f8;
+  background-color: #b79d8c;
   border-top: 1px solid #ccc;
 }
 
@@ -366,7 +346,7 @@ h5.modal-title {
     margin: 20px;
 }
 .cart-content, .cart-item {
-  border: 1px solid #563826;
-  background-color: #fffbe6;
+  border: none;
+  background-color: transparent; /* hoặc xóa dòng này */
   color: #000 !important;
 }
