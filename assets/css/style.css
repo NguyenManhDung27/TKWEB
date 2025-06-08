@@ -159,6 +159,49 @@ body {
     color: #fff; 
     border-color: #d4b8a0;
 }
+/* ========== ĐẢM BẢO NÚT MENU ĐỀU NHAU TRÊN MỌI MÀN HÌNH ========== */
+
+/* Desktop: các nút tự chia đều hàng ngang */
+@media (min-width: 641px) {
+  #menu .btn {
+    flex: 1 1 auto;
+    text-align: center;
+    max-width: 180px;
+  }
+
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile: các nút chiếm 100% chiều ngang */
+@media (max-width: 640px) {
+  #menu .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .drop-wrap {
+    width: 100%;
+  }
+
+  .drop {
+    position: static;
+    width: 100% !important;
+    border: none;
+    box-shadow: none;
+  }
+
+  .drop a {
+    padding-left: 20px;
+  }
+}
+
 /* _______banner_________*/
 .carousel-item img {
   max-height: 400px;
@@ -568,15 +611,40 @@ color: #5b3a1a; /* ví dụ: màu nâu */
   color: #4f46e5;
 }
 
-@media (max-width: 768px) {
-  .footer-top, .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+@media (min-width: 300px) {
+  .footer .row {
+    display: flex;            
+    flex-direction: column;   
+    align-items: center;      
+    text-align: center;       
+    justify-content: center;  
   }
 
-  .footer-logo-section {
-    align-items: center;
+  .footer .col-md-3,
+  .footer .col-md-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+
+  .footer .d-flex {
+    justify-content: center !important;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer .d-flex.gap-3 {
+    justify-content: center;
   }
 }
 
@@ -822,6 +890,49 @@ font-size: 22px;
 color: #59554c;
 white-space: nowrap;
 }
+/* Responsive trên màn hình nhỏ hơn 576px */
+@media (max-width: 576px) {
+  .kham-pha .card {
+    margin-bottom: 16px;
+  }
+
+  .kham-pha .card-title {
+    font-size: 15px;
+  }
+
+  .kham-pha .card-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .kham-pha .card {
+    margin-bottom: 16px;
+  }
+
+  .kham-pha .card-title {
+    font-size: 15px;
+  }
+
+  .kham-pha .card-text {
+    font-size: 13px;
+  }
+
+  .kham-pha .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Tùy chọn thêm: layout 1 cột ở màn hình bé */
+@media (max-width: 576px) {
+  #explore-products .col-12,
+  #explore-products .col-sm-6,
+  #explore-products .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 /*khám phá thương hiệu*/
 .brand-wrapper {
@@ -1039,7 +1150,7 @@ font-style: italic;
 }
 /* ------------------------ RESPONSIVE CHO CÁC THIẾT BỊ ------------------------ */
 
-/* iPhone SE, XR, Pixel 7, iPhone 12 Pro  */
+/* iPhone */
 @media (max-width: 479px) {
   .header-container,
   .footer-top {
@@ -1079,17 +1190,11 @@ font-style: italic;
     height: 240px;
   }
 }
-
 /* iPhone 14 Pro Max, Galaxy S20 Ultra (~480px - 767px) */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 365px) and (max-width: 767px) {
   .art-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /*.brand-container {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
   .decor-section {
     flex-direction: column;
     padding: 30px;
@@ -1145,7 +1250,7 @@ font-style: italic;
 }
 
 .category-banner .container {
-  max-width: 1200px;      /* 👈 Chiều rộng tối đa cố định */
+  max-width: 1200px;     
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1266,14 +1371,56 @@ background-color: #f7f3eb;
         margin-bottom: 8px;
         color: #333;
     }
-  
+    
+  /* ========== RESPONSIVE KHÁM PHÁ SẢN PHẨM ========== */
+@media (max-width: 600px) {
+  .kham-pha h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .kham-pha #category-filter {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .kham-pha #category-filter .btn {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .kham-pha #explore-products .card {
+    margin-bottom: 16px;
+  }
+
+  .kham-pha .card .card-title {
+    font-size: 1rem;
+  }
+  .image-row {
+    flex-direction: column;
+    }
+  .kham-pha .card .btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .kham-pha nav ul.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
   #photo-gallery .col-6.active {
     background-color: #f7f3eb;
     color:#5a3e2b
   }
     /* Ẩn tất cả tranh ban đầu */
      #photo-gallery .col-6 {
-      display: none !important; /* Đảm bảo không bị ghi đè */
+      display: none !important; 
     }
 
     /* Hiển thị tranh của trang hiện tại */
@@ -1286,6 +1433,10 @@ background-color: #f7f3eb;
     #pagination {
       text-align: center;
       margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     #pagination button {
@@ -1304,3 +1455,16 @@ background-color: #f7f3eb;
       cursor: not-allowed;
       opacity: 0.5;
     }
+
+/* ========== MOBILE========== */
+@media (max-width: 300px) {
+  #photo-gallery .col-6 {
+    width: 100%;
+    padding: 8px;
+  }
+
+  #pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
