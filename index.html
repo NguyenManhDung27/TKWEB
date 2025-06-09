@@ -1462,7 +1462,7 @@ orderBtn.addEventListener('click', () => {
     alert("Giỏ hàng trống, vui lòng chọn sản phẩm trước khi thanh toán!");
     return;
   }
-  window.location.href = 'pages/checkout.html';
+  window.location.href = "pages/checkout.html";
 });
 
 // Sự kiện thêm từ popup
@@ -1500,7 +1500,7 @@ document.querySelectorAll('.buy-now-popup').forEach(btn => {
     let quantity = parseInt(document.getElementById('quantityInput').value, 10);
     if (isNaN(quantity) || quantity < 1) quantity = 1;
     addProductToCart({ title, price, img, quantity });
-    window.location.href = 'checkout.html';
+    window.location.href = "pages/checkout.html";
   });
 });
 // --- Cập nhật badge khi tải trang ---
