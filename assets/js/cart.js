@@ -140,6 +140,13 @@ function removeItem(title) {
 
 // Sự kiện mở/đóng modal giỏ hàng
 cartBtn.addEventListener('click', () => {
+  const currentUser = localStorage.getItem("currentUser");
+  if (!currentUser) {
+    alert("Bạn cần đăng nhập để xem giỏ hàng.");
+    window.location.href = "login.html";
+    return;
+  }
+
   displayCartItems();
   modal.style.display = 'block';
 });
@@ -162,6 +169,14 @@ orderBtn.addEventListener('click', () => {
 // Sự kiện thêm sản phẩm từ danh sách
 document.querySelectorAll('.btn-add-cart').forEach(btn => {
   btn.addEventListener('click', e => {
+    // Kiểm tra đăng nhập
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+      alert("Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.");
+      window.location.href = "login.html"; // hoặc đường dẫn đúng của bạn
+      return;
+    }
+
     const card = e.target.closest('.col-6, .col-md-3');
     const title = card.querySelector('.fw-semibold').innerText.trim();
     const price = card.querySelector('.fw-bold.text-danger').innerText.trim();
@@ -174,6 +189,13 @@ document.querySelectorAll('.btn-add-cart').forEach(btn => {
 // Sự kiện thêm từ popup
 document.querySelectorAll('.add-to-cart-popup').forEach(btn => {
   btn.addEventListener('click', () => {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+      alert("Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.");
+      window.location.href = "login.html";
+      return;
+    }
+
     const title = document.getElementById('popupTitle').textContent.trim();
     const price = priceValue.toLocaleString('vi-VN') + '₫'; 
     const img = document.getElementById('popupImg').src;
@@ -183,12 +205,18 @@ document.querySelectorAll('.add-to-cart-popup').forEach(btn => {
     modal.style.display = 'none';
   });
 });
-
 // Mua ngay từ popup
 document.querySelectorAll('.buy-now-popup').forEach(btn => {
   btn.addEventListener('click', () => {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+      alert("Bạn cần đăng nhập để mua hàng.");
+      window.location.href = "login.html"; // hoặc đường dẫn đúng của bạn
+      return;
+    }
+
     const title = document.getElementById('popupTitle').textContent.trim();
-    const price = priceValue.toLocaleString('vi-VN') + '₫'; 
+    const price = document.getElementById('totalPrice').textContent.trim();
     const img = document.getElementById('popupImg').src;
     let quantity = parseInt(document.getElementById('quantityInput').value, 10);
     if (isNaN(quantity) || quantity < 1) quantity = 1;

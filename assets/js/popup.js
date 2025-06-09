@@ -13,11 +13,16 @@
       const image = productCard.querySelector('img').getAttribute('src');
 
       // Thêm vào giỏ (ở đây chỉ log ra console)
-      cart.push({ name, price, image });
-      console.log('Đã thêm vào giỏ hàng:', cart);
+      const currentUser = localStorage.getItem("currentUser");
+if (!currentUser) {
+  alert("Chuyển trang để đăng nhập!");
+  window.location.href = "login.html"; // hoặc link đúng của bạn
+  return;
+}
 
-      // Thông báo đơn giản
-      alert(`${name} đã được thêm vào giỏ hàng!`);
+cart.push({ name, price, image });
+console.log('Đã thêm vào giỏ hàng:', cart);
+alert(`${name} đã được thêm vào giỏ hàng!`);
     });
   });
   // pop-up//
@@ -94,8 +99,15 @@ function closePopup() {
 }
 
 document.querySelector('.buy-now-popup').addEventListener('click', () => {
+     const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+        alert("Chuyển trang để đăng nhập!");
+        window.location.href = "login.html";
+        return;
+    }
+
     if (!selectedSize) {
-        alert('Vui lòng chọn kích thước trước khi mua!');
+        alert('Vui lòng chọn kích thước trước khi thêm vào giỏ hàng!');
         return;
     }
     alert(`Bạn đã chọn mua ngay sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Đơn giá: ${priceValue.toLocaleString('vi-VN')}₫ - Thành tiền: ${totalPriceElement.textContent}. Chuyển đến trang thanh toán!`);
@@ -103,16 +115,20 @@ document.querySelector('.buy-now-popup').addEventListener('click', () => {
 });
 
 document.querySelector('.add-to-cart-popup').addEventListener('click', () => {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+        alert("Chuyển trang để đăng nhập!");
+        window.location.href = "login.html";
+        return;
+    }
+
     if (!selectedSize) {
         alert('Vui lòng chọn kích thước trước khi thêm vào giỏ hàng!');
         return;
     }
-alert(`Sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Đơn giá: ${priceValue.toLocaleString('vi-VN')}₫ - Thành tiền: ${totalPriceElement.textContent} đã được thêm vào giỏ hàng!`);
-    closePopup();
-});
 
-popup.addEventListener('click', e => {
-    if (e.target === popup) closePopup();
+    alert(`Sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Đơn giá: ${priceValue.toLocaleString('vi-VN')}₫ - Thành tiền: ${totalPriceElement.textContent} đã được thêm vào giỏ hàng!`);
+    closePopup();
 });
 
 /*   NÚT KHÁM PHÁ NGAY CHO TRANG DANH MỤC */
