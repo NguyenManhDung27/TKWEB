@@ -98,7 +98,7 @@ document.querySelector('.buy-now-popup').addEventListener('click', () => {
         alert('Vui lòng chọn kích thước trước khi mua!');
         return;
     }
-    alert(`Bạn đã chọn mua ngay sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Thành tiền: ${totalPriceElement.textContent}. Chuyển đến trang thanh toán!`);
+    alert(`Bạn đã chọn mua ngay sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Đơn giá: ${priceValue.toLocaleString('vi-VN')}₫ - Thành tiền: ${totalPriceElement.textContent}. Chuyển đến trang thanh toán!`);
     closePopup();
 });
 
@@ -107,7 +107,7 @@ document.querySelector('.add-to-cart-popup').addEventListener('click', () => {
         alert('Vui lòng chọn kích thước trước khi thêm vào giỏ hàng!');
         return;
     }
-    alert(`Sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Thành tiền: ${totalPriceElement.textContent} đã được thêm vào giỏ hàng!`);
+alert(`Sản phẩm: ${popupTitle.textContent} - Kích thước: ${selectedSize} - Số lượng: ${quantity} - Đơn giá: ${priceValue.toLocaleString('vi-VN')}₫ - Thành tiền: ${totalPriceElement.textContent} đã được thêm vào giỏ hàng!`);
     closePopup();
 });
 
