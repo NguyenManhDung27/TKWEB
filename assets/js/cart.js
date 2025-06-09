@@ -164,7 +164,7 @@ orderBtn.addEventListener('click', () => {
     return;
   }
 
-  window.location.href = 'pages/checkout.html';
+  window.location.href = 'checkout.html';
 });
 // Sự kiện thêm sản phẩm từ danh sách
 document.querySelectorAll('.btn-add-cart').forEach(btn => {
@@ -221,7 +221,7 @@ document.querySelectorAll('.buy-now-popup').forEach(btn => {
     let quantity = parseInt(document.getElementById('quantityInput').value, 10);
     if (isNaN(quantity) || quantity < 1) quantity = 1;
     addProductToCart({ title, price, img, quantity });
-    window.location.href = 'pages/checkout.html';
+    window.location.href = 'checkout.html';
   });
 });
 
