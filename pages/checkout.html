@@ -4,101 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
-    <link rel="stylesheet" href="../assets/css/checkout.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #e9e9e9;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+        .product-item img {
+            object-fit: cover;
+        }
+        .home-link {
+            color: #000;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        .home-link:hover {
+            color: #000;
+            background-color: #f0f0f0;
+        }
+        .home-link i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     
-<div class="container">
-    <div class="checkoutLayout">
-
-        <div class="returnCart">
-            <a href="../index.html">Quay về trang chủ</a>
-            <h1>Danh sách sản phẩm</h1>
-            <div class="list">
-                <!-- Danh sách sản phẩm sẽ được thêm vào đây -->
+<div class="container py-5">
+    <a href="../index.html" class="home-link">
+        <i class="bi bi-arrow-left" ></i> Quay về trang chủ
+    </a>
+    
+    <div class="row g-4">
+        <!-- Left Column - Cart Items -->
+        <div class="col-12 col-lg-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="h4 mb-4">Danh sách sản phẩm</h2>
+                    <div class="list">
+                        <!-- Products will be added here -->
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="right">
-            <h1>Đơn hàng</h1>
+        <!-- Right Column - Order Form -->
+        <div class="col-12 col-lg-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h2 class="h4 mb-4">Đơn hàng</h2>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
 
-            <div class="form">
-                <div class="group">
-                    <label for="name">Họ và tên</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-    
-                <div class="group">
-                    <label for="phone">Số điện thoại</label>
-                    <input type="text" name="phone" id="phone" required>
-                </div>
-    
-                <div class="group">
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" name="address" id="address" required>
-                </div>
-    
-                <div class="group">
-    <label for="country">Quốc gia</label>
-    <select name="country" id="country" required>
-        <option value="">Chọn...</option>
-        <option value="Vietnam">Việt Nam</option>
-        <option value="Kingdom">Kingdom</option>
-    </select>
-</div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
 
-<div class="group" id="city-group" style="display: none;">
-    <label for="city">Tỉnh / Thành phố</label>
-    <select name="city" id="city" required>
-        <option value="">Chọn...</option>
-    </select>
-</div>
-            </div>
-            <div class="return">
-                <div class="row">
-                    <div>Tổng sản phẩm</div>
-                    <div class="totalQuantity">0</div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Địa chỉ</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Quốc gia</label>
+                            <select class="form-select" id="country" required>
+                                <option value="">Chọn...</option>
+                                <option value="Vietnam">Việt Nam</option>
+                                <option value="Kingdom">Kingdom</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3" id="city-group" style="display: none;">
+                            <label for="city" class="form-label">Tỉnh / Thành phố</label>
+                            <select class="form-select" id="city" required>
+                                <option value="">Chọn...</option>
+                            </select>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Tổng sản phẩm:</span>
+                            <span class="totalQuantity fw-bold">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                            <span>Thành tiền:</span>
+                            <span class="totalPrice fw-bold text-primary">0</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 buttonCheckout">
+                            Đặt hàng
+                        </button>
+                    </form>
                 </div>
-                <div class="row">
-                    <div>Thành Tiền</div>
-                    <div class="totalPrice">0</div>
-                </div>
             </div>
-            <button class="buttonCheckout">Đặt hàng</button>
         </div>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-        const countrySelect = document.getElementById("country");
+    const countrySelect = document.getElementById("country");
     const citySelect = document.getElementById("city");
     const cityGroup = document.getElementById("city-group");
 
+    // Danh sách tỉnh thành Việt Nam
     const vietnamCities = [
-          "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
-  "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau",
-  "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai",
-  "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương",
-  "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang",
-  "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
-  "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
-  "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La",
-  "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang",
-  "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
+        "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
+        "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau",
+        "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai",
+        "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương",
+        "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang",
+        "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
+        "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
+        "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La",
+        "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang",
+        "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
     ];
 
-    countrySelect.addEventListener("change", function () {
+    // Xử lý hiển thị tỉnh thành khi chọn quốc gia
+    countrySelect.addEventListener("change", function() {
         const selectedCountry = this.value;
-
-        // Xóa tất cả option cũ trong city
-        citySelect.innerHTML = '<option value="">Choose...</option>';
+        citySelect.innerHTML = '<option value="">Chọn...</option>';
 
         if (selectedCountry === "Vietnam") {
-            // Hiển thị nhóm thành phố
             cityGroup.style.display = "block";
-
-            // Thêm danh sách tỉnh
             vietnamCities.forEach(city => {
                 const option = document.createElement("option");
                 option.value = city;
@@ -106,63 +151,69 @@
                 citySelect.appendChild(option);
             });
         } else {
-            // Ẩn thành phố nếu không phải Việt Nam
             cityGroup.style.display = "none";
         }
     });
-    // Lấy thông tin sản phẩm từ localStorage
-    var products = JSON.parse(localStorage.getItem('cartProducts')) || [];
 
-    // Kiểm tra xem có sản phẩm nào không
+    // Lấy và hiển thị sản phẩm từ giỏ hàng
+    const products = JSON.parse(localStorage.getItem('cartProducts')) || [];
+    
     if (products.length > 0) {
-        var listContainer = document.querySelector('.list');
-        var totalQuantity = 0;
-        var totalPrice = 0;
+        const listContainer = document.querySelector('.list');
+        let totalQuantity = 0;
+        let totalPrice = 0;
 
-        // Lặp qua từng sản phẩm và thêm vào danh sách
-products.forEach(function(product) {
-    var item = document.createElement('div');
-    item.classList.add('item');
+        products.forEach(function(product) {
+            const price = parseInt(product.price.replace(/[^\d]/g, ''));
+            const itemTotal = price * product.quantity;
 
-    // Tính giá tiền thực tế
-    var price = parseInt(product.price.replace(/[^\d]/g, '')); // bỏ ký hiệu $, nếu có
-    var itemTotal = price * product.quantity;
+            const item = document.createElement('div');
+            item.classList.add('card', 'mb-3', 'border-0');
+            item.innerHTML = `
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="${product.img}" class="img-fluid rounded" alt="${product.title}">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <h5 class="card-title">${product.title}</h5>
+                                    <p class="card-text text-muted">${price.toLocaleString('vi-VN')} VNĐ / 1 sản phẩm</p>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="badge bg-secondary">Số lượng: ${product.quantity}</span>
+                                </div>
+                                <div class="col-6 col-md-4 text-end">
+                                    <span class="fw-bold">${itemTotal.toLocaleString('vi-VN')} VNĐ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            listContainer.appendChild(item);
 
-    item.innerHTML = `
-        <img src="${product.img}" alt="${product.title}" width="100" height="100">
-        <div class="info">
-            <div class="name">${product.title}</div>
-            <div class="price">${price.toLocaleString('vi-VN')} VNĐ / 1 sản phẩm</div>
-        </div>
-        <div class="quantity">${product.quantity}</div>
-        <div class="returnPrice">${itemTotal.toLocaleString('vi-VN')} VNĐ</div>
-    `;
-    listContainer.appendChild(item);
+            totalQuantity += parseInt(product.quantity);
+            totalPrice += itemTotal;
+        });
 
-    // Cập nhật tổng số lượng và tổng giá
-    totalQuantity += parseInt(product.quantity);
-    totalPrice += itemTotal;
-});
-
-// Cập nhật tổng số lượng và tổng giá vào giao diện
-document.querySelector('.totalQuantity').innerText = totalQuantity;
-document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} VNĐ`;
+        document.querySelector('.totalQuantity').innerText = totalQuantity;
+        document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} VNĐ`;
     }
 
-    // Xử lý sự kiện khi nhấn nút CHECKOUT
-    document.querySelector('.buttonCheckout').addEventListener('click', function() {
-        // Kiểm tra xem tất cả các trường đã được điền chưa
-        var name = document.getElementById('name').value;
-        var phone = document.getElementById('phone').value;
-        var address = document.getElementById('address').value;
-        var country = document.getElementById('country').value;
-        var city = document.getElementById('city').value;
+    // Form validation và xử lý đặt hàng
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const country = document.getElementById('country').value;
+        const city = document.getElementById('city').value;
 
-        if (name && phone && address && country && city) {
-            // Xóa giỏ hàng sau khi đặt hàng thành công
+        if (name && phone && address && country && (country !== 'Vietnam' || city)) {
             localStorage.removeItem('cartProducts');
-
-            // Chuyển hướng đến trang pay.html
             window.location.href = 'pay.html';
         } else {
             alert("Vui lòng điền đầy đủ thông tin!");
