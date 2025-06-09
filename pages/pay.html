@@ -1,65 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặt hàng thành công</title>
-    <style>
-        /* success.css */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdf6f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt hàng thành công</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #fdf6f0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
 
-.container {
-    background-color: #fff;
-    padding: 40px 50px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 500px;
-}
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-h1 {
-    color: #563826;
-    margin-bottom: 20px;
-    font-size: 28px;
-}
+    .container {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px;
+      z-index: 2;
+      position: relative;
+    }
 
-p {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
+    h1 {
+      color: #563826;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
 
-a.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #775f50;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
+    p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
 
-a.button:hover {
-    background-color: #563826;
-}
+    a.button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ab9181;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-    </style>
+    a.button:hover {
+      background-color: #563826;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Đặt hàng thành công!</h1>
-        <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ xử lý đơn hàng của bạn sớm nhất có thể.</p>
-        <a href="../index.html" class="button">Quay về trang chủ</a>
-    </div>
+
+<canvas id="canvas"></canvas>
+
+<div class="container">
+  <h1>Đặt hàng thành công!</h1>
+  <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ xử lý đơn hàng của bạn sớm nhất có thể.</p>
+  <a href="../index.html" class="button">Quay về trang chủ</a>
+</div>
+
+<script>
+window.onload = () => {
+  const canvas = document.getElementById("canvas"),
+        ctx = canvas.getContext("2d");
+  let cw = canvas.width = window.innerWidth;
+  let ch = canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", () => {
+    cw = canvas.width = window.innerWidth;
+    ch = canvas.height = window.innerHeight;
+  });
+
+  const hearts = [];
+
+  function drawHeart(x, y, size, alpha = 1) {
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.translate(x, y);
+    ctx.scale(size, size);
+    ctx.beginPath();
+    ctx.moveTo(0, -15);
+    ctx.bezierCurveTo(10, -30, 40, -30, 40, 0);
+    ctx.bezierCurveTo(40, 30, 0, 55, 0, 75);
+    ctx.bezierCurveTo(0, 55, -40, 30, -40, 0);
+    ctx.bezierCurveTo(-40, -30, -10, -30, 0, -15);
+    ctx.closePath();
+    ctx.fillStyle = "#fcb7b7"; // màu hồng
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function createHeart(x, y) {
+    hearts.push({
+      x,
+      y,
+      vy: -3 - Math.random() * 1,           // tốc độ bay nhanh
+      size: 0.15 + Math.random() * 0.5,     // nhỏ hơn
+      ds: 0.002 + Math.random() * 0.003,
+      alpha: 1,
+      da: 0.002 + Math.random() * 0.002     // giảm alpha chậm hơn để bay cao hơn
+    });
+  }
+
+  canvas.addEventListener("click", e => {
+    for (let i = 0; i < 5; i++) {
+      createHeart(e.clientX + (Math.random() * 20 - 10), e.clientY);
+    }
+  });
+
+  // tạo nhiều trái tim thường xuyên hơn
+  setInterval(() => {
+    for (let i = 0; i < 3; i++) {
+      const x = Math.random() * cw;
+      createHeart(x, ch + 20);
+    }
+  }, 300);
+
+  function animate() {
+    ctx.clearRect(0, 0, cw, ch);
+    for (let i = hearts.length - 1; i >= 0; i--) {
+      const h = hearts[i];
+      h.y += h.vy;
+      h.size += h.ds;
+      h.alpha -= h.da;
+      drawHeart(h.x, h.y, h.size, h.alpha);
+      if (h.alpha <= 0) hearts.splice(i, 1);
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+};
+</script>
+
 </body>
 </html>

@@ -22,7 +22,7 @@ a{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border: 1px solid #a7a7c4;
+    border: 1px solid #dacca1;
     border-radius: 10px;
     width: 50%;
 
@@ -621,6 +621,10 @@ header .totalQuantity{
     background-color: #cfc3b8;
     margin-top: 20px;
     font-weight: bold;
+    color: #000;
+}
+.buttonCheckout:hover {
+    background-color: #e3ded9; 
     color: #000;
 }
 .buttonCheckout:hover {

@@ -1,3 +1,4 @@
+
 // Lấy các phần tử cần thao tác
 const tabs = document.querySelectorAll(".tab");
 const forms = document.querySelectorAll(".form");
@@ -19,12 +20,10 @@ function switchTab(tabName) {
         form.classList.toggle("active", form.id === `${tabName}Form`);
     });
 
-    // Ẩn/hiện thông báo lỗi khi đổi tab
     loginMessage.style.display = "none";
     regMessage.style.display = "none";
 }
 
-// Sự kiện cho các tab
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => switchTab(tab.dataset.tab));
 });
@@ -35,7 +34,7 @@ switchLinks.forEach((link) => {
     });
 });
 
-// Hàm set thông báo và hiển thị
+// Hiển thị thông báo
 function showMessage(element, message, isSuccess = false) {
     element.textContent = message;
     element.className = "message " + (isSuccess ? "success" : "error");
@@ -62,14 +61,11 @@ loginForm.addEventListener("submit", function (e) {
     }
 
     showMessage(loginMessage, "Đăng nhập thành công! Đang chuyển hướng...", true);
-    localStorage.setItem("currentUser", JSON.stringify(user)); // Lưu thông tin người dùng
-
-    // Cập nhật giao diện header
+    localStorage.setItem("currentUser", JSON.stringify(user));
     updateHeaderUI(user);
 
-    // Chuyển hướng đến trang chính sau 1.5 giây
     setTimeout(() => {
-        window.location.href = "../index.html"; // Đảm bảo đường dẫn đúng
+        window.location.href = "../index.html";
     }, 1500);
 });
 
@@ -81,14 +77,12 @@ registerForm.addEventListener("submit", function (e) {
     const username = this.regUsername.value.trim();
     const password = this.regPassword.value.trim();
 
-    // Kiểm tra email hợp lệ
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         showMessage(regMessage, "Email không hợp lệ!");
         return;
     }
 
-    // Các điều kiện mật khẩu
     if (password.length < 8) {
         showMessage(regMessage, "Mật khẩu phải có ít nhất 8 ký tự!");
         return;
@@ -106,35 +100,32 @@ registerForm.addEventListener("submit", function (e) {
         return;
     }
 
-    // Kiểm tra tên đăng nhập tồn tại chưa
     const users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.some((u) => u.username === username)) {
         showMessage(regMessage, "Tên đăng nhập đã tồn tại!");
         return;
     }
 
-    // Thêm user mới vào danh sách và lưu
     users.push({ email, fullname, username, password });
     localStorage.setItem("users", JSON.stringify(users));
 
     showMessage(regMessage, "Đăng ký thành công! Vui lòng đăng nhập.", true);
     this.reset();
 
-    // Chuyển tab về đăng nhập sau 1.5s
     setTimeout(() => switchTab("login"), 1500);
 });
 
-// Cập nhật giao diện header
+// Cập nhật giao diện khi đã đăng nhập
 function updateHeaderUI(user) {
     if (usernameDisplay) {
-        usernameDisplay.textContent = user.fullname || user.username || "User  "; // Hiển thị tên người dùng
-        usernameDisplay.style.display = "inline"; // Hiển thị tên người dùng
+        usernameDisplay.textContent = user.username;
+        usernameDisplay.style.display = "inline";
     }
     if (logoutBtn) {
-        logoutBtn.style.display = "inline-block"; // Hiển thị nút đăng xuất
+        logoutBtn.style.display = "inline-block";
     }
     if (loginLink) {
-        loginLink.style.display = "none"; // Ẩn link đăng nhập
+        loginLink.style.display = "none";
     }
 }
 

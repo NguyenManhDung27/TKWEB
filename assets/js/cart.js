@@ -151,9 +151,14 @@ window.addEventListener('click', e => {
 
 // Nút thanh toán
 orderBtn.addEventListener('click', () => {
+  const cartItems = getCart();
+  if (cartItems.length === 0) {
+    alert("Giỏ hàng trống, vui lòng chọn 1 sản phẩm để thêm vào giỏ.");
+    return;
+  }
+
   window.location.href = 'checkout.html';
 });
-
 // Sự kiện thêm sản phẩm từ danh sách
 document.querySelectorAll('.btn-add-cart').forEach(btn => {
   btn.addEventListener('click', e => {
